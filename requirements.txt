@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+sentence-transformers
+faiss-cpu
+langchain
+langchain-community
+requests
+numpy
+scikit-learn
+rank-bm25
