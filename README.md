@@ -1,4 +1,4 @@
-# **NAFTAL Intelligence Optimizer — *smart AI knowledge engine.***
+# **NAFTAL Intelligence Optimizer** — *smart AI knowledge engine.*
 # Legal Procedure Assistant – RAG System
 
 ## Overview
