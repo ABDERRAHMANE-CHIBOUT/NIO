@@ -1,14 +1,22 @@
-import requests
-from app.core.config import LLM_MODEL
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 class LLM:
-    def generate(self, prompt: str):
-        response = requests.post(
-            "http://localhost:11434/api/generate",
-            json={
-                "model": LLM_MODEL,
-                "prompt": prompt,
-                "stream": False
-            }
+    def __init__(self):
+        self.client = OpenAI(
+            api_key=os.getenv("API_KEY"),
+            base_url=os.getenv("BASE_URL")
         )
-        return response.json()["response"]
+
+    def generate(self, prompt: str):
+        response = self.client.chat.completions.create(
+            model=os.getenv("LLM_MODEL"),
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+
+        return response.choices[0].message.content

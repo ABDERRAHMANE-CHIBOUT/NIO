@@ -12,6 +12,7 @@ from app.core.config import EMBEDDING_MODEL
 
 class RAGPipeline:
     def __init__(self):
+        
         # Load and process documents once at startup
         raw_docs = load_documents("data/raw")
         split_docs = split_documents(raw_docs)

@@ -1,9 +1,11 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from app.pipeline.rag_pipeline import RAGPipeline
+from app.pipeline.json_pipeline import JSONPipeline
+
 
 router = APIRouter()
-pipeline = RAGPipeline()
+#pipeline = RAGPipeline()
+pipeline = JSONPipeline()
 
 class QueryRequest(BaseModel):
     question: str

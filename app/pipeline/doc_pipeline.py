@@ -4,6 +4,10 @@ import fitz
 from typing import List, Optional
 from pydantic import BaseModel
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 # =========================
@@ -52,7 +56,7 @@ class MarketStudySchema(BaseModel):
 # =========================
 # 2. OpenAI client
 # =========================
-client = OpenAI(api_key="YOUR_API_KEY")
+client = OpenAI(api_key=os.getenv("API_KEY"), base_url=os.getenv("BASE_URL"))
 
 
 # =========================
@@ -145,23 +149,23 @@ def extract_chunk_to_json(chunk):
     }
 
     prompt = f"""
-You are an information extraction engine for Naftal market studies.
-Extract only information explicitly present in the text.
-Return valid JSON only.
-Do not invent values.
-If a field is missing, use null, [] or {{}} depending on the field.
+            You are an information extraction engine for Naftal market studies.
+            Extract only information explicitly present in the text.
+            Return valid JSON only.
+            Do not invent values.
+            If a field is missing, use null, [] or {{}} depending on the field.
 
-Target schema:
-{json.dumps(schema_description, indent=2)}
+            Target schema:
+            {json.dumps(schema_description, indent=2)}
 
-Chunk pages: {chunk['pages']}
+            Chunk pages: {chunk['pages']}
 
-Text:
-{chunk['text']}
-"""
+            Text:
+            {chunk['text']}
+            """
 
     response = client.chat.completions.create(
-        model="gpt-5",
+        model=os.getenv("LLM_MODEL"),
         messages=[
             {"role": "system", "content": "You extract structured information and return JSON only."},
             {"role": "user", "content": prompt}
@@ -280,8 +284,8 @@ def process_market_study(pdf_path: str, output_path: str, document_id="market_00
 
 if __name__ == "__main__":
     result = process_market_study(
-        pdf_path="studies/market_study_blida.pdf",
-        output_path="outputs/market_study_blida.json",
+        pdf_path="../data/raw//market_study_blida.pdf",
+        output_path="../data/processed/market_study_blida.json",
         document_id="market_2026_001"
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))

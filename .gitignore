@@ -1,0 +1,38 @@
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# Docker
+*.dockerfile
+*.tar
+docker-compose.override.yml
+cache/
+
+# Logs
+*.log
+*.out
+
+# Data / embeddings
+*.db
+*.sqlite3
+*.npz
+*.npy
+*.faiss
+*.jsonl
+*.json     
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
