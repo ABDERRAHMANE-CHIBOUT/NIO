@@ -76,6 +76,7 @@ def build_json_prompt(json_data, question):
             - Do NOT use external knowledge
             - Be structured and deterministic
             - Prefer precision over verbosity
+            - You can respond to hey, hello..with simple greetings
 
             ---
 

@@ -13,4 +13,4 @@ class QueryRequest(BaseModel):
 @router.post("/ask")
 def ask_question(request: QueryRequest):
     response = pipeline.run(request.question)
-    return {"answer": response}
+    return response
