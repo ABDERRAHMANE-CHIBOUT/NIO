@@ -1,3 +1,1 @@
-
-
-EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"

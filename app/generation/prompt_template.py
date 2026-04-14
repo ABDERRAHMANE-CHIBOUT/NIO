@@ -1,18 +1,80 @@
 def build_prompt(context_chunks, question):
+    context_chunks = [chunk["text"] for chunk in context_chunks]
     context = "\n\n".join(context_chunks)
 
     return f"""
-        You are an assistant answering based only on the context below.
+        You are an intelligent assistant that answers user questions using ONLY the provided context.
+
+        ---
+
+        ## CONTEXT
+        You are given a set of retrieved text chunks.
+        These chunks are your only source of truth.
 
         Context:
         {context}
 
-        Question:
+        ---
+
+        ## OBJECTIVE
+        Answer the user's question accurately, clearly, and concisely using only the information in the context.
+
+        ---
+
+        ## REASONING STRATEGY
+
+        1. Understand the context:
+        - Carefully read all chunks
+        - Identify relevant facts, entities, and relationships
+        - Combine information across chunks when needed
+
+        2. Match the question:
+        - Find exact matches first
+        - Then consider partial matches or implicit connections
+        - Do NOT assume missing information
+
+        3. Handle uncertainty:
+        - If the answer is not explicitly or implicitly in the context → say "I don't know based on the provided context"
+        - If information is partial → clearly state limitations
+
+        ---
+
+        ## RESPONSE RULES
+
+        - Do NOT use external knowledge
+        - Do NOT hallucinate or guess missing facts
+        - Prefer correctness over completeness
+        - Be concise but informative
+        - If multiple possible answers exist, summarize them clearly
+
+        ---
+
+        ## SELF-CHECK (MANDATORY BEFORE ANSWERING)
+
+        - Is every claim supported by the context?
+        - Am I adding any outside knowledge?
+        - If uncertain, did I explicitly say so?
+
+        ---
+
+        ## OUTPUT FORMAT
+
+        ### 🧾 Answer:
+        Provide the direct answer here.
+
+        ### 📚 Evidence (optional but recommended):
+        Quote or reference the relevant parts of the context.
+
+        ### ⚖️ Confidence:
+        HIGH / MEDIUM / LOW based only on how strongly the context supports the answer.
+
+        ---
+
+        ## INPUT
+
+        User Question:
         {question}
-
-        Answer clearly and concisely:
         """
-
 def build_json_prompt(json_data, question):
     return f"""
             You are an intelligent assistant designed to answer user questions using a provided JSON knowledge base.
