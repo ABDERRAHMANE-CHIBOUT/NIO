@@ -21,8 +21,8 @@ class JSONPipeline:
     def run(
         self,
         question: str,
-        provider: str = "QWEN3-30B-A3B-THINKING",   # ✅ FIXED (your working provider)
-        model: str = None,        # optional (comes from env if None)
+        provider: str = "QWEN3-30B-A3B-THINKING",  
+        model: str = None,     
         temperature: float = 0.3,
         max_tokens: int = 800
     ):

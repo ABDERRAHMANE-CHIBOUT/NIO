@@ -17,7 +17,8 @@ class RAGPipeline:
 
         chunks = self.retriever.retrieve(
             query=question,
-            doc_ids=doc_ids
+            doc_ids=doc_ids,
+            top_k=7
         )
 
         prompt = build_prompt(chunks, question)
