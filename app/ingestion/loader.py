@@ -1,3 +1,5 @@
+# app/ingestion/loader.py
+
 import os
 from pathlib import Path
 import json
@@ -16,7 +18,7 @@ from langchain_core.documents import Document
 # Project paths
 # ---------------------------
 BASE_DIR = Path(__file__).resolve().parents[2]
-DATA_PATH = BASE_DIR / "data" / "raw"
+DATA_PATH = BASE_DIR / "data" / "raw"          # ← this line was missing
 
 
 # ---------------------------
@@ -67,7 +69,7 @@ def load_file(file_path: str):
     elif ext == ".json":
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return json.dumps(data, indent=2)  # better than str()
+        return json.dumps(data, indent=2)
 
     else:
         raise ValueError(f"Unsupported file type: {ext}")
@@ -118,9 +120,7 @@ def load_documents(folder_path: str = str(DATA_PATH)):
                 print(f"[WARN] Failed to load {file_path}: {e}")
 
     if not documents:
-        raise ValueError(
-            f"No documents loaded from {folder_path}. "
-            "Check your files."
-        )
+        print("[INFO] No documents found in folder — starting with empty vector store.")
+        return []
 
     return documents

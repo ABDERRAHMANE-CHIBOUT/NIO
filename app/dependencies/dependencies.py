@@ -1,3 +1,5 @@
+# app/dependencies/dependencies.py
+
 from pathlib import Path
 import numpy as np
 
@@ -27,26 +29,36 @@ def get_vector_store():
     BASE_DIR = Path(__file__).resolve().parents[2]
     data_path = BASE_DIR / "data" / "raw"
 
-    if not data_path.exists():
-        raise FileNotFoundError(f"Data path not found: {data_path}")
+    # ✅ Create folder if missing — no crash
+    data_path.mkdir(parents=True, exist_ok=True)
 
     embedder = get_embedder()
 
     # -----------------------------
-    # 📄 Load documents (NEW WAY)
+    # 📄 Load documents
     # -----------------------------
     documents = load_documents(str(data_path))
 
+    # ✅ Handle empty folder gracefully
     if not documents:
-        raise ValueError("No documents loaded")
+        print("[INFO] No documents found — creating empty vector store.")
+        sample = embedder.embed(["init"])
+        dim = len(sample[0])
+        _vector_store = FAISSVectorStore(dim)
+        return _vector_store
 
     # -----------------------------
     # ✂️ Split
     # -----------------------------
     chunks = split_documents(documents)
 
+    # ✅ Handle no chunks gracefully
     if not chunks:
-        raise ValueError("No chunks generated")
+        print("[WARN] No chunks generated — creating empty vector store.")
+        sample = embedder.embed(["init"])
+        dim = len(sample[0])
+        _vector_store = FAISSVectorStore(dim)
+        return _vector_store
 
     # -----------------------------
     # Prepare data
