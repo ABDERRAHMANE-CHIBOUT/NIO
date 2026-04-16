@@ -6,7 +6,7 @@ class Retriever:
         self.embedder = embedder
         self.vector_store = vector_store
 
-    def retrieve(self, query: str, doc_ids=None, top_k=5):
+    def retrieve(self, query: str, doc_ids=None, top_k=10):
 
         query_embedding = self.embedder.embed_query(query)
         query_embedding = np.asarray(query_embedding, dtype="float32")

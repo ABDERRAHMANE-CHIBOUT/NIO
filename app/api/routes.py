@@ -193,12 +193,10 @@ async def chat(
 # STUDY / ANALYSE
 # =============================================================
 @router.post("/study")
-async def study(
-    request: StudyRequest,
-    vector_store=Depends(get_vector_store)
-):
-    # Auto-create conversation if not provided or not found
+async def study(request: StudyRequest):
+
     conv_id = request.conversation_id
+
     if not conv_id or conv_id not in conversations:
         conv_id = str(uuid.uuid4())
         conversations[conv_id] = {
@@ -208,25 +206,17 @@ async def study(
 
     conversations[conv_id]["messages"].append({
         "role": "user",
-        "content": f"[Analyse] {request.topic}"
+        "content": f"[Study] {request.topic}"
     })
 
-    # Run Study pipeline
-    result = {}
     try:
-        provider  = map_llm_provider(request.llm)       # ✅ maps to .env key
-        embedder  = get_embedder()
-        retriever = Retriever(embedder, vector_store)
-        llm       = get_llm(provider)                   # ✅ exact .env key
-        pipeline  = StudyPipeline(retriever=retriever)
-        result    = pipeline.run(
-            topic=request.topic,
-            doc_ids=request.doc_ids or [],
-            llm=llm
-        )
-        answer = result if isinstance(result, str) else (
-            result.get("answer") or result.get("response") or str(result)
-        )
+        # ❌ NO retriever, NO llm injection
+        pipeline = StudyPipeline()
+
+        result = pipeline.run()
+
+        answer = result.get("study", str(result))
+
     except Exception as e:
         answer = f"Erreur analyse : {str(e)}"
 
@@ -237,7 +227,9 @@ async def study(
 
     return {
         "conversation_id": conv_id,
-        "answer": answer
+        "answer": answer,
+        "json_path": result.get("json_path"),
+        "mode": result.get("mode")
     }
 
 
