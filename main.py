@@ -1,18 +1,16 @@
-# NIO/main.py (or NIO/app/main.py — wherever your main.py is)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import router
 
-app = FastAPI(title='NIO — Naftal Intelligence Optimizer')
+app = FastAPI(title="NIO RAG Backend", version="1.0.0")
 
-# =============================================================
-# CORS — allows React frontend (Vite port 5173) to call this
-# =============================================================
+# CORS — must be before include_router
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",   # Vite dev server
-        "http://localhost:4173",   # Vite preview
+        "http://localhost:5173",
+        "http://localhost:4173",
+        "http://localhost:3000",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -21,10 +19,6 @@ app.add_middleware(
 
 app.include_router(router)
 
-@app.get('/')
+@app.get("/")
 def root():
-    return {'message': 'NIO RAG is working'}
-
-@app.get('/health')
-def health():
-    return {'status': 'ok', 'service': 'NIO RAG Backend'}
+    return {"message": "NIO RAG is working"}

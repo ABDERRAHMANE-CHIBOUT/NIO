@@ -246,7 +246,7 @@ async def upload_document(file: UploadFile = File(...)):
     ingestion  = IngestionPipeline(embedder, vector_store)
     num_chunks = ingestion.ingest(doc["path"], doc["doc_id"])
 
-    vector_store.save()
+  
 
     return {
         "message": "Document uploaded successfully",
