@@ -30,6 +30,16 @@ class DocumentManager:
                 "filename": file
             })
         return docs
+    
+    def get_document(self, doc_id: str):
+        for file in os.listdir(DATA_DIR):
+            if file.startswith(doc_id):
+                return {
+                    "doc_id": doc_id,
+                    "filename": file,
+                    "path": os.path.join(DATA_DIR, file)  # 🔥 FIX
+                }
+        return None
 
     def delete_document(self, doc_id: str):
         for file in os.listdir(DATA_DIR):

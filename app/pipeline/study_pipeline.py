@@ -1,6 +1,6 @@
 import os
 import json
-from typing import List, Tuple, Dict, Any
+from typing import Tuple, Dict, Any
 
 from app.ingestion.loader import load_documents
 from app.ingestion.splitter import split_documents

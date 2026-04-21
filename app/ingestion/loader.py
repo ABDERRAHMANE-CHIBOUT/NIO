@@ -3,14 +3,8 @@
 import os
 from pathlib import Path
 import json
-
-# PDF (better)
-import fitz  # pymupdf
-
-# DOCX
+import fitz  
 from docx import Document as DocxDocument
-
-# Langchain
 from langchain_core.documents import Document
 
 

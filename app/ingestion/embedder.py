@@ -1,7 +1,3 @@
-from sentence_transformers import SentenceTransformer
-import numpy as np
-import torch
-
 
 class Embedder:
     def __init__(self):

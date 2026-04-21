@@ -1,6 +1,5 @@
 import faiss
 import numpy as np
-import pickle
 from typing import List, Dict, Any
 
 
@@ -25,7 +24,10 @@ class FAISSVectorStore:
         self.texts.extend(texts)
         self.metadatas.extend(metadatas)
 
-    def search(self, query_embedding, k=5, filter=None):
+    def has_doc(self, doc_id: str) -> bool:
+        return any(m.get("doc_id") == doc_id for m in self.metadatas)
+
+    def search(self, query_embedding, k=5, filter_docs=None):
 
         query_embedding = np.asarray(query_embedding, dtype="float32")
 
@@ -42,7 +44,14 @@ class FAISSVectorStore:
                 f"Dim mismatch: query={query_embedding.shape}, index={self.index.d}"
             )
 
-        scores, indices = self.index.search(query_embedding, k)
+        # 🔥 FIX 1: normalize filter format
+        if isinstance(filter_docs, list):
+            filter_docs = {"doc_id": filter_docs}
+
+        # 🔥 FIX 2: increase search space when filtering
+        search_k = 50 if filter_docs else k
+
+        scores, indices = self.index.search(query_embedding, search_k)
 
         results = []
 
@@ -52,10 +61,13 @@ class FAISSVectorStore:
 
             metadata = self.metadatas[i]
 
-            if filter and "doc_id" in filter:
-                allowed = filter["doc_id"]
+            # 🔥 FIX 3: robust filtering
+            if filter_docs and "doc_id" in filter_docs:
+                allowed = filter_docs["doc_id"]
+
                 if isinstance(allowed, dict):
                     allowed = allowed.get("$in", [])
+
                 if isinstance(allowed, str):
                     allowed = [allowed]
 
@@ -67,5 +79,9 @@ class FAISSVectorStore:
                 "score": float(score),
                 "metadata": metadata
             })
+
+            # 🔥 FIX 4: stop AFTER filtering
+            if len(results) >= k:
+                break
 
         return results

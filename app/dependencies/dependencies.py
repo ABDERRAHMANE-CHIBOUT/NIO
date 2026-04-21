@@ -2,12 +2,17 @@
 
 from app.ingestion.embedder import Embedder
 from app.retrieval.vector_store import FAISSVectorStore
-from app.core.processed_store import ProcessedStore
-from app.ingestion.study_pipeline import StudyPipeline
 from app.core.laws_processor import LawsProcessor
+from app.pipeline.ingestion_pipeline import IngestionPipeline
+from app.utils.document_manager import DocumentManager
 
+doc_manager = DocumentManager()
 
+def get_ingestion_pipeline():
+    return IngestionPipeline(get_embedder(), get_vector_store())
 
+def get_document_manager():
+    return doc_manager
 
 # -------------------------
 # Singletons (global state)
@@ -15,8 +20,6 @@ from app.core.laws_processor import LawsProcessor
 
 _embedder = None
 _vector_store = None
-_processed_store = None
-_study_pipeline = None
 _laws_processor = None
 
 # -------------------------
@@ -43,37 +46,6 @@ def get_vector_store():
         _vector_store = FAISSVectorStore(dim=dim)
 
     return _vector_store
-
-
-# -------------------------
-# Processed Store (JSON / structured data)
-# -------------------------
-def get_processed_store():
-    global _processed_store
-
-    if _processed_store is None:
-        _processed_store = ProcessedStore()
-
-    return _processed_store
-
-
-# -------------------------
-# Study Pipeline (LLM + processed store)
-# -------------------------
-def get_study_pipeline(llm):
-    """
-    Creates or returns a cached StudyPipeline instance.
-    NOTE: pipeline is tied to LLM instance.
-    """
-    global _study_pipeline
-
-    if _study_pipeline is None:
-        _study_pipeline = StudyPipeline(
-            llm=llm,
-            processed_store=get_processed_store()
-        )
-
-    return _study_pipeline
 
 
 def get_laws_processor():

@@ -1,15 +1,14 @@
 # app/api/routes.py
 import uuid
-from typing import Optional, List
+from typing import Optional
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from pydantic import BaseModel
 
 from app.pipeline.rag_pipeline import RAGPipeline
 from app.pipeline.study_pipeline import StudyPipeline
-from app.dependencies.dependencies import get_embedder, get_vector_store, get_laws_processor
+from app.dependencies.dependencies import get_embedder, get_vector_store, get_laws_processor, get_ingestion_pipeline, get_document_manager
 from app.generation.factory import get_llm
-from app.retrieval.retriever import Retriever
 from app.utils.document_manager import DocumentManager
 from app.pipeline.ingestion_pipeline import IngestionPipeline
 
@@ -65,6 +64,8 @@ def map_llm_provider(llm_name: str) -> str:
         return "QWEN3-30B-A3B-THINKING"
 
     return provider
+
+
 # =============================================================
 # HEALTH
 # =============================================================
@@ -144,9 +145,10 @@ async def chat(
     request: ChatRequest,
     vector_store=Depends(get_vector_store),
     embedder=Depends(get_embedder),
-    laws_processor=Depends(get_laws_processor)
+    laws_processor=Depends(get_laws_processor),
+    ingestion_pipeline=Depends(get_ingestion_pipeline),
+    doc_manager=Depends(get_document_manager),
 ):
-
     conv_id = request.conversation_id
 
     # -------------------------
@@ -173,14 +175,37 @@ async def chat(
     try:
         llm = get_llm(provider)
 
+        # =========================================================
+        # AUTO-INGEST SELECTED DOCS
+        # =========================================================
+        if request.doc_ids:
+            print("🔍 FAISS BEFORE:", vector_store.index.ntotal)
+
+            for doc_id in request.doc_ids:
+
+                if not vector_store.has_doc(doc_id):
+                    print(f"📥 Ingesting missing doc: {doc_id}")
+
+                    doc = doc_manager.get_document(doc_id)
+
+                    if not doc:
+                        print(f"⚠️ Doc not found: {doc_id}")
+                        continue
+
+                chunks = ingestion_pipeline.ingest(doc["path"], doc_id)
+
+                print(f"📦 Ingestion result: {chunks} chunks")
+
+            print("✅ FAISS AFTER:", vector_store.index.ntotal)
+
         # -------------------------
-        # PIPELINE (NOW FULLY WIRED)
+        # PIPELINE
         # -------------------------
         pipeline = RAGPipeline(
             llm=llm,
             vector_store=vector_store,
             embedder=embedder,
-            laws_processor=laws_processor   # 🔥 FIXED
+            laws_processor=laws_processor
         )
 
         # -------------------------
@@ -216,6 +241,7 @@ async def chat(
         "answer": answer,
         "sources": result.get("sources", []) if isinstance(result, dict) else []
     }
+
 
 # =============================================================
 # STUDY / ANALYSE
@@ -263,6 +289,8 @@ async def study(request: StudyRequest):
         "json_path": result.get("json_path") if result else None,
         "mode": result.get("mode") if result else None
     }
+
+
 # =============================================================
 # UPLOAD DOCUMENT
 # =============================================================
