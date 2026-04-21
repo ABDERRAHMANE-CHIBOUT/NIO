@@ -7,8 +7,7 @@ from pydantic import BaseModel
 
 from app.pipeline.rag_pipeline import RAGPipeline
 from app.pipeline.study_pipeline import StudyPipeline
-from app.pipeline.json_pipeline import JSONPipeline
-from app.dependencies.dependencies import get_embedder, get_vector_store
+from app.dependencies.dependencies import get_embedder, get_vector_store, get_laws_processor
 from app.generation.factory import get_llm
 from app.retrieval.retriever import Retriever
 from app.utils.document_manager import DocumentManager
@@ -28,21 +27,21 @@ conversations: dict = {}
 # =============================================================
 class QueryRequest(BaseModel):
     question: str
-    llm: str = "Qwen3-30B-A3B-Thinking"
+    llm: str
 
 
 class ChatRequest(BaseModel):
     conversation_id: Optional[str] = None
     question: str
     doc_ids: Optional[list] = []
-    llm: str = "Qwen3-30B-A3B-Thinking"
+    llm: str
 
 
 class StudyRequest(BaseModel):
     conversation_id: Optional[str] = None
     topic: str
     doc_ids: Optional[list] = []
-    llm: str = "QWEN3-30B-A3B-THINKING"
+    llm: str
 
 
 # =============================================================
@@ -50,14 +49,22 @@ class StudyRequest(BaseModel):
 # Maps frontend model name → exact .env key prefix
 # =============================================================
 def map_llm_provider(llm_name: str) -> str:
+    llm_name = llm_name.strip().lower()
+
     mapping = {
-        "Qwen3-30B-A3B-Thinking": "QWEN3-30B-A3B-THINKING",
-        "GPT_OSS_120B":           "GPT_OSS_120B",
-        "default":                "QWEN3-30B-A3B-THINKING",
+        "qwen3-30b-a3b-thinking": "QWEN3-30B-A3B-THINKING",
+        "mistralai/voxtral-mini-4b-realtime-2602": "MISTRALAI_VOXTRAL_MINI_4B_REALTIME_2602",
+        "gpt-oss-120b": "GPT_OSS_120B",
+        "google/gemma-4-31b": "GOOGLE_GEMMA_4_31B"
     }
-    return mapping.get(llm_name, "QWEN3-30B-A3B-THINKING")
 
+    provider = mapping.get(llm_name)
 
+    if not provider:
+        print(f"⚠️ MODEL NOT FOUND ({llm_name}) → FALLBACK TO QWEN")
+        return "QWEN3-30B-A3B-THINKING"
+
+    return provider
 # =============================================================
 # HEALTH
 # =============================================================
@@ -74,7 +81,9 @@ def list_models():
     return {
         "models": [
             "Qwen3-30B-A3B-Thinking",
-            "GPT_OSS_120B",
+            "mistralai/Voxtral-Mini-4B-Realtime-2602",
+            "gpt-oss-120b",
+            "google/gemma-4-31B"
         ]
     }
 
@@ -128,23 +137,21 @@ def delete_conversation(conversation_id: str):
 
 
 # =============================================================
-# SIMPLE JSON PIPELINE
-# =============================================================
-@router.post("/ask")
-async def ask_question(request: QueryRequest):
-    return JSONPipeline().run(request.question)
-
-
-# =============================================================
 # RAG CHAT
 # =============================================================
 @router.post("/chat")
 async def chat(
     request: ChatRequest,
-    vector_store=Depends(get_vector_store)
+    vector_store=Depends(get_vector_store),
+    embedder=Depends(get_embedder),
+    laws_processor=Depends(get_laws_processor)
 ):
-    # Auto-create conversation if not provided or not found
+
     conv_id = request.conversation_id
+
+    # -------------------------
+    # CREATE NEW CONVERSATION
+    # -------------------------
     if not conv_id or conv_id not in conversations:
         conv_id = str(uuid.uuid4())
         conversations[conv_id] = {
@@ -152,42 +159,63 @@ async def chat(
             "messages": []
         }
 
-    # Save user message
     conversations[conv_id]["messages"].append({
         "role": "user",
         "content": request.question
     })
 
-    # Run RAG pipeline
+    provider = map_llm_provider(request.llm)
+    print("RAW REQUEST MODEL:", request.llm)
+
     result = {}
+    answer = ""
+
     try:
-        provider = map_llm_provider(request.llm)        # ✅ maps to .env key
-        pipeline = RAGPipeline(vector_store=vector_store)
-        result = pipeline.run(
-            question=request.question,
-            doc_ids=request.doc_ids or [],
-            llm_name=provider                           # ✅ exact .env key
+        llm = get_llm(provider)
+
+        # -------------------------
+        # PIPELINE (NOW FULLY WIRED)
+        # -------------------------
+        pipeline = RAGPipeline(
+            llm=llm,
+            vector_store=vector_store,
+            embedder=embedder,
+            laws_processor=laws_processor   # 🔥 FIXED
         )
-        answer = result.get("answer") or result.get("response") or str(result)
+
+        # -------------------------
+        # MODE CONTROL
+        # -------------------------
+        if not request.doc_ids:
+            result = pipeline.run(
+                question=request.question,
+                doc_ids=None,
+                llm_name=provider,
+                mode="laws"
+            )
+        else:
+            result = pipeline.run(
+                question=request.question,
+                doc_ids=request.doc_ids,
+                llm_name=provider,
+                mode="rag"
+            )
+
+        answer = result.get("answer") or str(result)
+
     except Exception as e:
         answer = f"Erreur RAG : {str(e)}"
 
-    # Save assistant message
     conversations[conv_id]["messages"].append({
         "role": "assistant",
         "content": answer
     })
-
-    # Auto-title from first exchange
-    if len(conversations[conv_id]["messages"]) == 2:
-        conversations[conv_id]["title"] = request.question[:50]
 
     return {
         "conversation_id": conv_id,
         "answer": answer,
         "sources": result.get("sources", []) if isinstance(result, dict) else []
     }
-
 
 # =============================================================
 # STUDY / ANALYSE
@@ -209,11 +237,15 @@ async def study(request: StudyRequest):
         "content": f"[Study] {request.topic}"
     })
 
+    result = None
+    answer = None
+
     try:
-        # ❌ NO retriever, NO llm injection
         pipeline = StudyPipeline()
 
-        result = pipeline.run()
+        result = pipeline.run(
+            domain=request.topic  # optional but better
+        )
 
         answer = result.get("study", str(result))
 
@@ -228,11 +260,9 @@ async def study(request: StudyRequest):
     return {
         "conversation_id": conv_id,
         "answer": answer,
-        "json_path": result.get("json_path"),
-        "mode": result.get("mode")
+        "json_path": result.get("json_path") if result else None,
+        "mode": result.get("mode") if result else None
     }
-
-
 # =============================================================
 # UPLOAD DOCUMENT
 # =============================================================

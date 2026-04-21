@@ -1,86 +1,126 @@
-import json
-from app.ingestion.embedder import Embedder
-from app.retrieval.retriever import Retriever
-from app.generation.llm import LLM
+from app.core.laws_processor import LawsProcessor
 from app.generation.prompt_template import build_prompt
-from app.core.config import EMBEDDING_MODEL
-from app.utils.json_loader import load_json
-from app.retrieval.json_retriever import JSONRetriever
+
 
 class RAGPipeline:
-    def __init__(
-        self,
-        vector_store,
-        json_path: str = "data/processed/data.json"
-        
-    ):
-        self.embedder = Embedder(EMBEDDING_MODEL)
+
+    def __init__(self, llm, vector_store, embedder, laws_processor: LawsProcessor):
+        self.llm = llm
         self.vector_store = vector_store
-        self.retriever = Retriever(self.embedder, self.vector_store)
-        self.llm = LLM()
+        self.embedder = embedder
+        self.laws_processor = laws_processor  # 👈 now REQUIRED
 
-        # 🔥 ALWAYS LOAD BASE KNOWLEDGE
-        self.base_data = load_json(json_path)
-        self.base_text = json.dumps(self.base_data, indent=2, ensure_ascii=False)
-        self.json_retriever = JSONRetriever(self.embedder, self.base_data)
-    # -----------------------------
-    # MAIN RUN
-    # -----------------------------
-    def run(
-    self,
-    question: str,
-    doc_ids: list = None,
-    llm_name: str = "Qwen3-30B-A3B-Thinking"
-    ):
+    # -------------------------
+    # MAIN PIPELINE
+    # -------------------------
+    def run(self, question, doc_ids=None, llm_name=None, mode="laws"):
 
-        # 🔹 1. (OPTIONAL) Query expansion
+        print(f"🔥 MODE: {mode} | DOC_IDS: {doc_ids}")
+        print(f"🧠 LLM PROVIDER: {getattr(self.llm, 'provider', 'unknown')}")
+
         try:
-            expanded_query = self.llm.generate(
-                prompt=f"Rewrite for legal retrieval: {question}"
+            query_emb = self.embedder.embed(question)
+
+            # =========================================================
+            # MODE 1: LAWS ONLY (NOW FULLY VECTORIZED)
+            # =========================================================
+            if mode == "laws" or not doc_ids:
+
+                core_knowledge = self.laws_processor.search(query_emb, k=50)
+
+                full_context = self._format_context(
+                    core=core_knowledge,
+                    retrieved=None
+                )
+
+                prompt = build_prompt(full_context, question)
+
+                return {
+                    "answer": self.llm.generate(prompt),
+                    "mode": "laws",
+                    "sources": ["laws_vector_store"]
+                }
+
+            # =========================================================
+            # MODE 2: HYBRID RAG (DOCS + LAWS)
+            # =========================================================
+            retrieved_docs = self.vector_store.search(
+                query_emb,
+                filter_docs=doc_ids
             )
-            query_used = expanded_query if expanded_query else question
-        except:
-            query_used = question
 
-        # 🔹 2. Retrieve from JSON (GROUND TRUTH)
-        json_chunks = self.json_retriever.retrieve(query_used, top_k=5)
+            # fallback if no docs
+            if not retrieved_docs:
+                print("⚠️ No retrieved docs, fallback to laws only")
 
-        # 🔹 3. Retrieve from vector DB (RAW FILES)
-        vector_chunks = self.retriever.retrieve(
-            query=query_used,
-            doc_ids=doc_ids,
-            top_k=10
-        )
+                core_knowledge = self.laws_processor.search(query_emb, k=15)
 
-        # 🔹 4. Simple rerank (merge)
-        all_chunks = json_chunks + vector_chunks
+                full_context = self._format_context(
+                    core=core_knowledge,
+                    retrieved=None
+                )
 
-        def rerank(query, chunks):
-            return sorted(
-                chunks,
-                key=lambda c: query.lower() in c["text"].lower(),
-                reverse=True
+                prompt = build_prompt(full_context, question)
+
+                return {
+                    "answer": self.llm.generate(prompt),
+                    "mode": "laws_fallback",
+                    "sources": ["laws_vector_store_fallback"]
+                }
+
+            # laws still act as grounding context
+            core_knowledge = self.laws_processor.search(query_emb, k=15)
+
+            full_context = self._format_context(
+                core=core_knowledge,
+                retrieved=retrieved_docs
             )
 
-        final_chunks = rerank(question, all_chunks)[:6]
+            prompt = build_prompt(full_context, question)
 
-        # 🔹 5. Build context (CLEAN)
-        context = "\n\n".join([
-            f"[{c['metadata'].get('source', 'doc')}] {c['text']}"
-            for c in final_chunks
-        ])
+            return {
+                "answer": self.llm.generate(prompt),
+                "mode": "rag",
+                "sources": doc_ids
+            }
 
-        # 🔹 6. Prompt
-        prompt = build_prompt(context, question)
+        except Exception as e:
+            return {
+                "answer": f"⚠️ RAG Error: {str(e)}",
+                "mode": "error",
+                "sources": []
+            }
 
-        # 🔹 7. Generate
-        response = self.llm.generate(
-            prompt=prompt,
-            provider=llm_name
-        )
+    # -------------------------
+    # CONTEXT BUILDER
+    # -------------------------
+    def _format_context(self, core, retrieved):
 
-        return {
-            "answer": response,
-            "sources": [c["metadata"] for c in final_chunks],
-            "mode": "hybrid_rag_v2"
-        }
+        context_parts = []
+
+        # CORE LAWS (NOW SEMANTIC)
+        context_parts.append("[CORE_KNOWLEDGE]")
+        context_parts.append(self._safe_serialize(core))
+
+        # RETRIEVED DOCS
+        context_parts.append("\n[RETRIEVED_DOCS]")
+
+        if retrieved:
+            context_parts.append(self._safe_serialize(retrieved))
+        else:
+            context_parts.append("EMPTY")
+
+        return "\n".join(context_parts)
+
+    # -------------------------
+    # SAFE SERIALIZATION
+    # -------------------------
+    def _safe_serialize(self, data):
+        import json
+
+        try:
+            if isinstance(data, (dict, list)):
+                return json.dumps(data, indent=2, ensure_ascii=False)
+            return str(data)
+        except Exception:
+            return str(data)

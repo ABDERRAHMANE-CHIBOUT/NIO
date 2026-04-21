@@ -5,15 +5,18 @@ from app.generation.llm import LLM
 
 
 class JSONPipeline:
-    def __init__(self, json_path: str = "data/processed/data.json"):
+    def __init__(self, laws_path: str = "data/laws/laws.json", documents_path: str = "data/processed/data.json"):
         """
         Loads JSON once at startup
         """
         self.llm = LLM()
-        self.data = load_json(json_path)
+        self.data = load_json(laws_path)
+        self.documents = load_json(documents_path)
 
         # Pre-stringify once (fast + avoids recomputing)
-        self.json_text = json.dumps(self.data, indent=2, ensure_ascii=False)
+        self.laws = json.dumps(self.data, indent=2, ensure_ascii=False)
+        self.documents = json.dumps(self.documents, indent=2, ensure_ascii=False)
+
 
     # -----------------------------
     # MAIN RUN METHOD
@@ -31,7 +34,7 @@ class JSONPipeline:
         """
 
         # build prompt safely
-        prompt = build_json_prompt(self.json_text, question)
+        prompt = build_json_prompt(self.laws, self.documents, question)
 
         # call LLM (no silent hiding anymore)
         answer = self.llm.generate(

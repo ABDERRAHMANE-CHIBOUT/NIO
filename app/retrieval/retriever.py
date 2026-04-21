@@ -1,32 +1,48 @@
+import faiss
 import numpy as np
+from typing import List
+from app.utils.chunking import smart_chunk
 
 
 class Retriever:
-    def __init__(self, embedder, vector_store):
+    def __init__(self, embedder):
         self.embedder = embedder
-        self.vector_store = vector_store
+        self.index = None
+        self.metadata = []
 
-    def retrieve(self, query: str, doc_ids=None, top_k=10):
+    def build_index(self, processed_docs: List[dict]):
+        texts = []
+        self.metadata = []
 
-        query_embedding = self.embedder.embed_query(query)
-        query_embedding = np.asarray(query_embedding, dtype="float32")
+        for doc in processed_docs:
+            for article in doc["articles"]:
+                chunks = smart_chunk(article["content"], article["title"])
 
-        # fix shape ALWAYS
-        if query_embedding.ndim == 1:
-            query_embedding = query_embedding.reshape(1, -1)
+                for c in chunks:
+                    texts.append(c)
+                    self.metadata.append({
+                        "doc": doc["doc_name"],
+                        "article": article["title"]
+                    })
 
-        if query_embedding.ndim == 3:
-            query_embedding = query_embedding.reshape(1, -1)
+        embeddings = self.embedder.encode(texts)
+        embeddings = np.array(embeddings).astype("float32")
 
-        metadata_filter = None
+        self.index = faiss.IndexFlatL2(len(embeddings[0]))
+        self.index.add(embeddings)
 
-        if doc_ids:
-            metadata_filter = {
-                "doc_id": doc_ids[0] if len(doc_ids) == 1 else {"$in": doc_ids}
-            }
+        self.texts = texts
 
-        return self.vector_store.search(
-            query_embedding=query_embedding,
-            k=top_k,
-            filter=metadata_filter
-        )
+    def search(self, query: str, k: int = 5):
+        q_emb = np.array([self.embedder.encode(query)]).astype("float32")
+
+        distances, indices = self.index.search(q_emb, k)
+
+        results = []
+        for i in indices[0]:
+            results.append({
+                "text": self.texts[i],
+                "meta": self.metadata[i]
+            })
+
+        return results

@@ -1,18 +1,27 @@
 # app/dependencies/dependencies.py
 
-from pathlib import Path
-import numpy as np
-
 from app.ingestion.embedder import Embedder
 from app.retrieval.vector_store import FAISSVectorStore
-from app.ingestion.loader import load_documents
-from app.ingestion.splitter import split_documents
+from app.core.processed_store import ProcessedStore
+from app.ingestion.study_pipeline import StudyPipeline
+from app.core.laws_processor import LawsProcessor
 
-# 🔥 SINGLETON INSTANCES
+
+
+
+# -------------------------
+# Singletons (global state)
+# -------------------------
+
 _embedder = None
 _vector_store = None
+_processed_store = None
+_study_pipeline = None
+_laws_processor = None
 
-
+# -------------------------
+# Embedder
+# -------------------------
 def get_embedder():
     global _embedder
     if _embedder is None:
@@ -20,73 +29,64 @@ def get_embedder():
     return _embedder
 
 
+# -------------------------
+# Vector Store (FAISS)
+# -------------------------
 def get_vector_store():
     global _vector_store
 
-    if _vector_store is not None:
-        return _vector_store
+    if _vector_store is None:
+        embedder = get_embedder()
 
-    BASE_DIR = Path(__file__).resolve().parents[2]
-    data_path = BASE_DIR / "data" / "raw"
+        dim = len(embedder.embed("test"))
 
-    # ✅ Create folder if missing — no crash
-    data_path.mkdir(parents=True, exist_ok=True)
-
-    embedder = get_embedder()
-
-    # -----------------------------
-    # 📄 Load documents
-    # -----------------------------
-    documents = load_documents(str(data_path))
-
-    # ✅ Handle empty folder gracefully
-    if not documents:
-        print("[INFO] No documents found — creating empty vector store.")
-        sample = embedder.embed(["init"])
-        dim = len(sample[0])
-        _vector_store = FAISSVectorStore(dim)
-        return _vector_store
-
-    # -----------------------------
-    # ✂️ Split
-    # -----------------------------
-    chunks = split_documents(documents)
-
-    # ✅ Handle no chunks gracefully
-    if not chunks:
-        print("[WARN] No chunks generated — creating empty vector store.")
-        sample = embedder.embed(["init"])
-        dim = len(sample[0])
-        _vector_store = FAISSVectorStore(dim)
-        return _vector_store
-
-    # -----------------------------
-    # Prepare data
-    # -----------------------------
-    texts = [c.page_content for c in chunks]
-    metadatas = [c.metadata for c in chunks]
-
-    # -----------------------------
-    # ⚡ Embeddings
-    # -----------------------------
-    embeddings = np.array(embedder.embed(texts)).astype("float32")
-
-    if len(embeddings.shape) != 2:
-        raise ValueError(f"Invalid embedding shape: {embeddings.shape}")
-
-    dim = embeddings.shape[1]
-
-    # -----------------------------
-    # 🧠 FAISS init
-    # -----------------------------
-    _vector_store = FAISSVectorStore(dim)
-
-    _vector_store.add(
-        embeddings=embeddings,
-        texts=texts,
-        metadatas=metadatas
-    )
-
-    print(f"✅ Vector store ready | chunks={len(texts)} | dim={dim}")
+        _vector_store = FAISSVectorStore(dim=dim)
 
     return _vector_store
+
+
+# -------------------------
+# Processed Store (JSON / structured data)
+# -------------------------
+def get_processed_store():
+    global _processed_store
+
+    if _processed_store is None:
+        _processed_store = ProcessedStore()
+
+    return _processed_store
+
+
+# -------------------------
+# Study Pipeline (LLM + processed store)
+# -------------------------
+def get_study_pipeline(llm):
+    """
+    Creates or returns a cached StudyPipeline instance.
+    NOTE: pipeline is tied to LLM instance.
+    """
+    global _study_pipeline
+
+    if _study_pipeline is None:
+        _study_pipeline = StudyPipeline(
+            llm=llm,
+            processed_store=get_processed_store()
+        )
+
+    return _study_pipeline
+
+
+def get_laws_processor():
+    global _laws_processor
+
+    if _laws_processor is None:
+        embedder = get_embedder()
+
+        _laws_processor = LawsProcessor(embedder=embedder)
+
+        # 🔥 IMPORTANT: build once at initialization
+        _laws_processor.build()
+
+        print("⚖️ LawsProcessor initialized and indexed")
+
+    return _laws_processor
