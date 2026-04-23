@@ -151,9 +151,9 @@ async def chat(
 ):
     conv_id = request.conversation_id
 
-    # -------------------------
-    # CREATE NEW CONVERSATION
-    # -------------------------
+    # ---------------------------------------------------------
+    # CREATE NEW CONVERSATION IF NEEDED
+    # ---------------------------------------------------------
     if not conv_id or conv_id not in conversations:
         conv_id = str(uuid.uuid4())
         conversations[conv_id] = {
@@ -161,6 +161,7 @@ async def chat(
             "messages": []
         }
 
+    # Save user message
     conversations[conv_id]["messages"].append({
         "role": "user",
         "content": request.question
@@ -173,34 +174,44 @@ async def chat(
     answer = ""
 
     try:
+        # ---------------------------------------------------------
+        # INIT LLM
+        # ---------------------------------------------------------
         llm = get_llm(provider)
 
-        # =========================================================
-        # AUTO-INGEST SELECTED DOCS
-        # =========================================================
+        # ---------------------------------------------------------
+        # AUTO INGEST SELECTED DOCS (ONLY IF NOT ALREADY INDEXED)
+        # ---------------------------------------------------------
         if request.doc_ids:
             print("🔍 FAISS BEFORE:", vector_store.index.ntotal)
 
             for doc_id in request.doc_ids:
 
-                if not vector_store.has_doc(doc_id):
-                    print(f"📥 Ingesting missing doc: {doc_id}")
+                # already indexed → skip
+                if vector_store.has_doc(doc_id):
+                    print(f"✅ Doc already indexed: {doc_id}")
+                    continue
 
-                    doc = doc_manager.get_document(doc_id)
+                print(f"📥 Ingesting missing doc: {doc_id}")
 
-                    if not doc:
-                        print(f"⚠️ Doc not found: {doc_id}")
-                        continue
+                doc = doc_manager.get_document(doc_id)
 
-                chunks = ingestion_pipeline.ingest(doc["path"], doc_id)
+                if not doc:
+                    print(f"⚠️ Document not found: {doc_id}")
+                    continue
+
+                chunks = ingestion_pipeline.ingest(
+                    doc["path"],
+                    doc_id
+                )
 
                 print(f"📦 Ingestion result: {chunks} chunks")
 
             print("✅ FAISS AFTER:", vector_store.index.ntotal)
 
-        # -------------------------
-        # PIPELINE
-        # -------------------------
+        # ---------------------------------------------------------
+        # INIT RAG PIPELINE
+        # ---------------------------------------------------------
         pipeline = RAGPipeline(
             llm=llm,
             vector_store=vector_store,
@@ -208,17 +219,12 @@ async def chat(
             laws_processor=laws_processor
         )
 
-        # -------------------------
+        # ---------------------------------------------------------
         # MODE CONTROL
-        # -------------------------
-        if not request.doc_ids:
-            result = pipeline.run(
-                question=request.question,
-                doc_ids=None,
-                llm_name=provider,
-                mode="laws"
-            )
-        else:
+        # ---------------------------------------------------------
+        if request.doc_ids:
+            print("🔥 Running HYBRID RAG mode")
+
             result = pipeline.run(
                 question=request.question,
                 doc_ids=request.doc_ids,
@@ -226,11 +232,25 @@ async def chat(
                 mode="rag"
             )
 
-        answer = result.get("answer") or str(result)
+        else:
+            print("⚖️ Running LAWS ONLY mode")
+
+            result = pipeline.run(
+                question=request.question,
+                doc_ids=None,
+                llm_name=provider,
+                mode="laws"
+            )
+
+        answer = result.get("answer", "No response generated")
 
     except Exception as e:
+        print(f"❌ CHAT ERROR: {str(e)}")
         answer = f"Erreur RAG : {str(e)}"
 
+    # ---------------------------------------------------------
+    # SAVE ASSISTANT RESPONSE
+    # ---------------------------------------------------------
     conversations[conv_id]["messages"].append({
         "role": "assistant",
         "content": answer
@@ -241,7 +261,6 @@ async def chat(
         "answer": answer,
         "sources": result.get("sources", []) if isinstance(result, dict) else []
     }
-
 
 # =============================================================
 # STUDY / ANALYSE

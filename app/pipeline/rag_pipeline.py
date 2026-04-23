@@ -69,7 +69,7 @@ class RAGPipeline:
                 }
 
             # laws still act as grounding context
-            core_knowledge = self.laws_processor.search(query_emb, k=15)
+            core_knowledge = self.laws_processor.search(query_emb, k=50)
 
             full_context = self._format_context(
                 core=core_knowledge,
