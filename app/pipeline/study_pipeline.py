@@ -1,181 +1,100 @@
 import os
-import json
-from typing import Tuple, Dict, Any
 
-from app.ingestion.loader import load_documents
-from app.ingestion.splitter import split_documents
-from app.generation.llm import LLM
+from app.utils.document_manager import DocumentManager
+from app.core.laws_processor import LawsProcessor
+from app.utils.case_extractor import CaseExtractor
+from app.generation.study_prompt import build_study_prompt
+from app.ingestion.loader import load_file
 
 
 class StudyPipeline:
-    """
-    StudyPipeline:
-    - Ingests raw documents
-    - Splits into chunks
-    - Builds structured JSON dataset
-    - Uses LAWS as ground truth
-    - Generates an AI-powered study report
-    """
 
     def __init__(
         self,
-        raw_path: str = "data/raw",
-        processed_path: str = "data/processed",
-        laws_path: str = "data/laws/laws.json"
+        llm,
+        embedder,
+        laws_processor: LawsProcessor
     ):
-        self.raw_path = raw_path
-        self.processed_path = processed_path
-        self.laws_path = laws_path
-        self.llm = LLM()
+        
+        self.llm = llm
+        self.embedder = embedder
+        self.laws_processor = laws_processor
+        self.doc_manager = DocumentManager()
+        self.extractor = CaseExtractor(llm)
 
-        os.makedirs(self.processed_path, exist_ok=True)
+    def run(self, doc_ids):
 
-        # 🔥 Load laws as ground truth
-        if os.path.exists(self.laws_path):
-            with open(self.laws_path, "r", encoding="utf-8") as f:
-                self.laws = json.load(f)
-        else:
-            self.laws = {}
+        try:
+            print(f"📚 Running study mode for docs: {doc_ids}")
 
-    # -----------------------------
-    # STEP 1: LOAD + SPLIT FILES
-    # -----------------------------
-    def ingest(self):
-        documents = load_documents(self.raw_path)
+            # -------------------------
+            # Load ALL selected docs
+            # -------------------------
+            all_docs_content = []
 
-        if not documents:
-            raise ValueError(f"No documents found in {self.raw_path}")
+            for doc_id in doc_ids:
+                doc = self.doc_manager.get_document(doc_id)
 
-        chunks = split_documents(documents)
+                if not doc:
+                    continue
 
-        if not chunks:
-            raise ValueError("Document splitting returned empty chunks")
+                content = load_file(doc["path"])
 
-        return chunks
+                if isinstance(content, list):
+                    for page in content:
+                        if page["text"].strip():
+                            all_docs_content.append(
+                                page["text"]
+                            )
+                else:
+                    if content.strip():
+                        all_docs_content.append(content)
 
-    # -----------------------------
-    # STEP 2: BUILD STRUCTURED JSON
-    # -----------------------------
-    def build_json(self, chunks) -> Tuple[Dict[str, Any], str]:
-        data = {
-            "documents": [
-                {
-                    "text": chunk.page_content,
-                    "metadata": getattr(chunk, "metadata", {})
+            if not all_docs_content:
+                return {
+                    "status": "error",
+                    "message": "No valid documents found"
                 }
-                for chunk in chunks
-            ]
-        }
 
-        json_path = os.path.join(self.processed_path, "data.json")
+            # -------------------------
+            # Extract full case info
+            # -------------------------
+            extracted_case = self.extractor.extract(
+                all_docs_content
+            )
 
-        # ✅ Save JSON for traceability
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+            # -------------------------
+            # Retrieve laws only
+            # -------------------------
+            law_query = str(extracted_case)
 
-        return data, json_path
+            query_emb = self.embedder.embed(law_query)
 
-    # -----------------------------
-    # STEP 3: GENERATE STUDY REPORT
-    # -----------------------------
-    def generate_study(
-        self,
-        data: Dict[str, Any],
-        provider: str = "QWEN3-30B-A3B-THINKING",
-        domain: str = "general studies",
-        temperature: float = 0.3,
-        max_tokens: int = 1200
-    ):
-        json_text = json.dumps(data, indent=2, ensure_ascii=False)
-        laws_text = json.dumps(self.laws, indent=2, ensure_ascii=False)
+            relevant_laws = self.laws_processor.search(
+                query_emb,
+                k=50
+            )
 
-        prompt = f"""
-                You are an expert educator and knowledge synthesizer.
+            # -------------------------
+            # Generate final study
+            # -------------------------
+            prompt = build_study_prompt(
+                extracted_case,
+                relevant_laws
+            )
 
-                Your task is to generate a HIGH-QUALITY STUDY REPORT grounded in OFFICIAL LAWS.
+            final_study = self.llm.generate(prompt)
 
-                ---
+            return {
+                "status": "success",
+                "mode": "study",
+                "study": final_study,
+                "extracted_case": extracted_case,
+                "laws_used": relevant_laws
+            }
 
-                ## PRIORITY OF SOURCES
-
-                1. LAWS (STRICT GROUND TRUTH - MUST BE FOLLOWED)
-                2. DOCUMENTS (SUPPORTING CONTEXT)
-
-                If documents contradict laws → IGNORE documents.
-
-                ---
-
-                ## OBJECTIVE
-
-                Transform the data into a structured study guide aligned with the laws.
-                domain: {domain}
-
-                ---
-
-                ## OUTPUT MUST INCLUDE:
-
-                1. Clear Summary (aligned with laws)
-                2. Key Concepts (based on laws)
-                3. Rules / Constraints / Principles (STRICTLY from laws)
-                4. Common Mistakes or Violations (based on laws)
-                5. A Realistic Case Study (consistent with laws)
-
-                ---
-
-                ## RULES
-
-                - Use LAWS as the primary source of truth
-                - Use DOCUMENTS only to enrich or illustrate
-                - Do NOT invent information
-                - If something is missing in laws → say "Not specified in laws"
-                - Be precise and structured
-
-                ---
-
-                ## LAWS:
-                {laws_text}
-
-                ---
-
-                ## DOCUMENT DATA:
-                {json_text}
-                """
-
-        response = self.llm.generate(
-            prompt=prompt,
-            provider=provider,
-            temperature=temperature,
-            max_tokens=max_tokens
-        )
-
-        return response
-
-    # -----------------------------
-    # FULL PIPELINE
-    # -----------------------------
-    def run(
-        self,
-        domain: str = "general studies",
-        provider: str = "QWEN3-30B-A3B-THINKING",
-        temperature: float = 0.3,
-        max_tokens: int = 1200
-    ):
-        chunks = self.ingest()
-
-        data, json_path = self.build_json(chunks)
-
-        study = self.generate_study(
-            data=data,
-            domain=domain,
-            provider=provider,
-            temperature=temperature,
-            max_tokens=max_tokens
-        )
-
-        return {
-            "study": study,
-            "json_path": json_path,
-            "domain": domain,
-            "mode": "study_generation",
-            "num_chunks": len(chunks)
-        }
+        except Exception as e:
+            return {
+                "status": "error",
+                "message": str(e)
+            }

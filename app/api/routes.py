@@ -262,14 +262,21 @@ async def chat(
         "sources": result.get("sources", []) if isinstance(result, dict) else []
     }
 
+
 # =============================================================
 # STUDY / ANALYSE
 # =============================================================
 @router.post("/study")
-async def study(request: StudyRequest):
-
+async def study(
+    request: StudyRequest,
+    embedder=Depends(get_embedder),
+    laws_processor=Depends(get_laws_processor),
+):
     conv_id = request.conversation_id
 
+    # ---------------------------------------------------------
+    # CREATE CONVERSATION IF NEEDED
+    # ---------------------------------------------------------
     if not conv_id or conv_id not in conversations:
         conv_id = str(uuid.uuid4())
         conversations[conv_id] = {
@@ -282,21 +289,52 @@ async def study(request: StudyRequest):
         "content": f"[Study] {request.topic}"
     })
 
-    result = None
-    answer = None
+    result = {}
+    answer = ""
 
     try:
-        pipeline = StudyPipeline()
+        # ---------------------------------------------------------
+        # INIT LLM
+        # ---------------------------------------------------------
+        provider = map_llm_provider(request.llm)
+        llm = get_llm(provider)
 
-        result = pipeline.run(
-            domain=request.topic  # optional but better
+        # ---------------------------------------------------------
+        # VALIDATION
+        # ---------------------------------------------------------
+        if not request.doc_ids:
+            raise HTTPException(
+                status_code=400,
+                detail="Study mode requires at least one document"
+            )
+
+        # ---------------------------------------------------------
+        # INIT STUDY PIPELINE
+        # ---------------------------------------------------------
+        pipeline = StudyPipeline(
+            llm=llm,
+            embedder=embedder,
+            laws_processor=laws_processor
         )
 
-        answer = result.get("study", str(result))
+        print(f"📚 Running study for docs: {request.doc_ids}")
+
+        result = pipeline.run(
+            doc_ids=request.doc_ids
+        )
+
+        answer = result.get(
+            "study",
+            "No study generated"
+        )
 
     except Exception as e:
+        print(f"❌ STUDY ERROR: {str(e)}")
         answer = f"Erreur analyse : {str(e)}"
 
+    # ---------------------------------------------------------
+    # SAVE RESPONSE
+    # ---------------------------------------------------------
     conversations[conv_id]["messages"].append({
         "role": "assistant",
         "content": answer
@@ -305,10 +343,10 @@ async def study(request: StudyRequest):
     return {
         "conversation_id": conv_id,
         "answer": answer,
-        "json_path": result.get("json_path") if result else None,
-        "mode": result.get("mode") if result else None
+        "mode": result.get("mode", "study"),
+        "laws_used": result.get("laws_used", []),
+        "extracted_case": result.get("extracted_case", {})
     }
-
 
 # =============================================================
 # UPLOAD DOCUMENT
