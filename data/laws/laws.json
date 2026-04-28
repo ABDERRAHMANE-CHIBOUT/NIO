@@ -1,0 +1,1081 @@
+{
+  "document_title": "PROCEDURE DE PASSATION DES MARCHES DE NAFTAL - L089R6",
+  "introduction": {
+    "text": "La présente procédure organise et fixe les modalités pratiques relatives à l'élaboration et l'exécution des marchés d'acquisition de Fournitures, de réalisation de Travaux, de Services et d'Etudes et Services de Conseil au sein de NAFTAL. Cette procédure vise à assurer l'efficacité de la passation des marchés et la maîtrise des coûts, de la qualité et des délais, dans le respect des principes de liberté d'accès à la commande, d'égalité de traitement des candidats et de transparence des procédures. Tels sont les objectifs et l'économie de la présente procédure."
+  },
+  "definitions": [
+    {
+      "term": "Structure Contractante",
+      "definition": "Toute structure de NAFTAL habilitée à passer un Marché."
+    },
+    {
+      "term": "Soumissionnaire",
+      "definition": "Toute personne physique ou morale qui propose une offre en vue de la conclusion d'un Marché."
+    },
+    {
+      "term": "Dossier d'Appel d'Offres (DAO)",
+      "definition": "Tout dossier émis, en vue du lancement d'un appel d'offres ou d'une consultation par la Structure Contractante."
+    },
+    {
+      "term": "Publication, Publier",
+      "definition": "Ces termes font référence à la publication obligatoire au BAOSEM et facultatif dans un ou deux quotidiens nationaux."
+    },
+    {
+      "term": "BAOSEM",
+      "definition": "Bulletin des Appels d'Offres du Secteur de l'Energie et des Mines."
+    },
+    {
+      "term": "Commissions des Marchés",
+      "definition": "Les commissions internes de NAFTAL, instituées dans les conditions prévues dans l'article 87 de la présente procédure, chargées des missions de contrôle de conformité des Marchés."
+    },
+    {
+      "term": "Comités de validation techniques",
+      "definition": "Les commissions internes de NAFTAL, instituées dans les conditions prévues dans l'article 77 de la présente procédure, chargées des missions de contrôle de la partie technique du Dossier d'Appel d'Offres ou du cahier des charges."
+    },
+    {
+      "term": "Marché",
+      "definition": "Tout contrat écrit au sens de la législation en vigueur, passé dans les conditions prévues dans la présente procédure en vue de la réalisation, pour le compte de la Structure Contractante, de travaux, d'acquisition de fournitures, de services et d'études et Services de Conseil."
+    },
+    {
+      "term": "Marchés Complexes et/ou d'Envergure",
+      "definition": "Marchés ayant pour objet la conception, la réalisation, la réhabilitation et la maintenance d'unités, usines et ensembles de production, de transformation (bitumes, etc.), de conditionnement, de transport par canalisations et de stockage d'hydrocarbures et de dérivés et des services liés. Ils peuvent couvrir également des infrastructures d'importance et l'acquisition d'équipements de technologie de pointe. Les marchés à responsabilité unique de type EPC sont des marchés complexes et d'envergure définis comme des marchés de travaux."
+    },
+    {
+      "term": "Marché de Conception/Réalisation",
+      "definition": "Marché portant à la fois sur l'établissement des études Front End Engineering Design (FEED) et la réalisation de l'ouvrage lorsque des motifs d'ordre technique et/ou de délais de réalisation du marché rendent nécessaires l'association de l'Entrepreneur aux études de l'ouvrage. Le Marché de Conception/Réalisation est un Marché de Travaux, dit à responsabilité unique."
+    },
+    {
+      "term": "Consultant",
+      "definition": "Toute entité publique ou privée, personne morale ou physique, nationale ou étrangère qualifiée pour fournir des études et services de conseil, d'assistance et d'expertise."
+    },
+    {
+      "term": "Partenaire Cocontractant",
+      "definition": "Signifie une ou plusieurs personne(s) physique(s) ou morale(s) qui s'engage(ent) au titre d'un Marché soit individuellement, soit dans le cadre d'un groupement d'entreprises. Il peut être Fournisseur, Entrepreneur, Prestataire ou Consultant."
+    },
+    {
+      "term": "Structure Centrale",
+      "definition": "Branche d'activité, Direction Exécutive, Centrale et de soutien."
+    },
+    {
+      "term": "Structure Décentralisée",
+      "definition": "District, UNM et Centre de Formation."
+    }
+  ],
+  "titles": [
+    {
+      "title_id": "TITRE I",
+      "title_name": "DISPOSITIONS PRÉLIMINAIRES",
+      "sections": [
+        {
+          "section_id": "GENERAL",
+          "section_name": "",
+          "articles": [
+            {
+              "article_id": "ART-1",
+              "article_number": "1",
+              "article_title": "OBJET DE LA PROCEDURE",
+              "content": "La présente procédure a pour objet de définir les règles de passation des marchés de NAFTAL en matière d'acquisition de fournitures, de réalisation de travaux, de prestation de services ainsi que les marchés de réalisation d'études et de Services de Conseil. En vue d'assurer l'efficacité de la passation des marchés et la bonne utilisation des dépenses, les marchés de NAFTAL doivent respecter les principes de liberté d'accès à la commande, d'égalité de traitement des candidats, et de transparence des procédures, dans le respect des dispositions de la présente procédure. Ne sont pas soumis aux dispositions de la présente procédure, les marchés : d'acquisition ou de location de terrains ou de biens immobiliers; relatifs aux prestations de service de conciliation et d'arbitrage; passés avec des avocats pour des prestations d'assistance et de représentation; passés avec des experts pour des prestations de consulting; passés avec les huissiers de justice, commissaires aux comptes, commissaires-priseurs, l'expert géomètre foncier, notaires, médiateurs, traducteurs; d'hébergement et restauration du personnel lors de déplacements; de consultations et prestations médicales; de formation jusqu'à concurrence d'un montant inférieur ou égal à 50 millions de dinars toutes taxes comprises; de transport aérien, maritime et ferroviaire du personnel; les conventions de contrôle technique et laboratoires (CTC, LTP, ENACT); les conventions de services eau, électricité et gaz, télécommunication (téléphones, Internet); les conventions avec les établissements nationaux de recherche scientifique tels que les Universités, les Instituts et les Ecoles; les actions de sponsoring; les abonnements relatifs à la documentation officiels et aux revues spécialisées.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-2",
+              "article_number": "2",
+              "article_title": "CONSULTATION DE FOURNISSEURS",
+              "content": "La Structure Contractante peut recourir à la consultation de Fournisseurs, Entrepreneurs, Prestataires ou Consultants pour toute opération dont le montant estimé est inférieur ou égal à cinquante millions de dinars (50.000.000,00 DA). Les montants visés sont exprimés en toutes taxes comprises et peuvent être actualisés périodiquement par décision du Président Directeur Général.",
+              "subsections": [
+                {
+                  "subtitle": "2.1 SEUILS DE PASSATION DES COMMANDES",
+                  "text": "La Structure Contractante peut recourir à la consultation de Fournisseurs, Entrepreneurs, Prestataires ou Consultants, ci-après désignée \"Consultation de Fournisseurs\", pour toute opération dont le montant estimé est inférieur ou égal à cinquante millions de dinars (50.000.000,00 DA) dans le respect des seuils de la charte de délégation de pouvoirs FIN 02 en vigueur. Pour les opérations susvisées, la Structure Contractante peut également procéder par appel d'offres. Les montants sont exprimés en toutes taxes comprises et peuvent être actualisés périodiquement par décision du Président Directeur Général. Au cours d'une même année, la Structure Contractante ne peut pas dépasser les seuils visés ci-dessus pour une opération de même nature auprès du même fournisseur. Si les seuils sont dépassés, aucune dépense de même nature ne peut être engagée sans le recours aux procédures formalisées."
+                },
+                {
+                  "subtitle": "2.2 CONDITIONS DE CONSULTATION DE FOURNISSEURS",
+                  "text": "Les commandes visées ci-dessus dûment détaillées doivent faire l'objet d'une consultation de Fournisseurs, Entrepreneurs, Prestataires ou Consultants qualifiés, issus d'un système de qualification, pour le choix de la meilleure offre en termes de qualité et de prix. Un système de qualification est un système de présélection d'entreprises jugées aptes à réaliser tel ou tel type de prestation. La liste des candidats doit contenir au minimum cinq (05) candidats qualifiés et la structure contractante doit, à chacune de ses consultations, consulter l'ensemble des candidats figurant sur la liste. Dans le cas où la liste est composée de moins de cinq (05) candidats qualifiés, la structure contractante peut opérer avec les seuls candidats qualifiés dans la mesure où le nombre minimum est de trois (03). La pré-qualification doit être renouvelée périodiquement sans que cette périodicité n'excède six (06) mois."
+                },
+                {
+                  "subtitle": "2.3 MODALITES DE CONSULTATION DE FOURNISSEURS",
+                  "text": "Pour toute Consultation de Fournisseurs visée à l'alinéa 2.1, la Structure Contractante transmet un Dossier de Consultation aux candidats sélectionnés contenant: une description précise des besoins; modalités de remise et de traitement des offres; les délais d'exécution, de livraison ou de réalisation; les conditions générales d'exécution de l'opération; la liste des pièces administratives à fournir; la date de réception et d'ouverture des offres. Le dossier administratif doit comprendre: copie du registre de commerce ou la carte d'artisan; certificat de qualification et de classification professionnelle quand il s'agit de contrats portant sur le bâtiment, génie civil, travaux publics et hydraulique. La Structure Contractante désignera un Comité d'Ouverture des Plis et d'Evaluation des offres (COPEO) Permanent composé d'au moins trois (3) membres."
+                },
+                {
+                  "subtitle": "2.4 INFRUCTUOSITE DE LA CONSULTATION DE FOURNISSEURS",
+                  "text": "L'infructuosité de la Consultation de Fournisseurs est prononcée dans les mêmes conditions que celles prévues à l'article 28 de la présente procédure. Si après avoir relancé la consultation, il n'est réceptionné qu'une seule offre jugée techniquement conforme après évaluation, la Structure Contractante peut continuer la procédure d'évaluation de l'offre unique dans le respect des exigences en termes de qualité, coûts et délais, après accord préalable des Directeurs de Branches, Directeurs Exécutifs, Directeurs Centraux et de soutien."
+                },
+                {
+                  "subtitle": "2.5 FORMALISATION DES COMMANDES",
+                  "text": "Les commandes dont le montant est inférieur à deux millions de dinars (2.000.000 DA) pour les Structures Centralisées et six cent mille dinars (600.000,00 DA) pour les Structures Décentralisées peuvent faire l'objet de bons de commandes ou d'un contrat. Les commandes dont le montant est supérieur ou égal à ces seuils doivent faire l'objet de contrats fixant les droits et obligations des parties. Dans le cas des prestations d'études et Services de Conseil à l'exception des séminaires, la Structure Contractante est tenue d'établir un contrat quel que soit le montant de l'opération."
+                },
+                {
+                  "subtitle": "2.6 COMMANDES SANS CONSULTATION",
+                  "text": "Les commandes de fournitures ou de prestations de même nature dont le montant durant le même exercice auprès du même Fournisseur ou Prestataire est inférieur ou égal à deux millions de dinars (2.000.000 DA) pour les Structures Centralisées et six cent mille dinars (600.000,00 DA) pour les Structures Décentralisées ne font pas obligatoirement l'objet d'une Consultation de Fournisseurs. La Structure Contractante peut soit lancer une consultation directe et écrite d'au moins trois (03) entreprises qualifiées, soit procéder directement à la passation de la commande."
+                },
+                {
+                  "subtitle": "2.7 REPORTING",
+                  "text": "La Structure Contractante présente à la Commission des Marchés Compétente un état trimestriel des réalisations au titre de ces contrats ou commandes et ce, le mois suivant la clôture du trimestre concerné. L'état trimestriel doit contenir notamment l'objet des commandes conclues, leurs montants et les noms des Fournisseurs consultés et retenus."
+                },
+                {
+                  "subtitle": "2.8 RECOURS",
+                  "text": "Le candidat qui conteste le choix opéré par la Structure Contractante dans le cadre de la pré-qualification ou de la consultation de fournisseurs peut introduire un recours auprès de la Structure Contractante dans les quarante-huit (48) heures à compter de la date de notification des résultats. Tout recours doit comporter: les noms, qualité, fonction, raison sociale et adresse du siège social du candidat; les références et l'objet de la consultation concernée; un exposé des motifs du recours daté et signé accompagné de toutes pièces justificatives. Le Comité Ad Hoc ou le COPEO rend une décision motivée au plus tard dans les cinq (05) jours ouvrables à compter de la date de réception du recours."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-3",
+              "article_number": "3",
+              "article_title": "MARCHES DE LOCATION D'ATTELAGE COMPLET POUR LE TRANSPORT DES PRODUITS PETROLIERS",
+              "content": "En raison de leur envergure et de leur complexité, les marchés relatifs à la location d'attelage complet pour le transport des produits pétroliers sont passés selon le mode de Consultation Restreinte sur la base d'une liste dressée par la Structure Contractante issue d'un processus de pré-qualification. Ces marchés sont soumis aux conditions prévues dans l'annexe 1 de la présente procédure. Cette disposition peut être appliquée à d'autre type de marché. La liste de ces Marchés est fixée par décision du Président Directeur Général.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-4",
+              "article_number": "4",
+              "article_title": "CONDITIONS DE COMMENCEMENT DE L'EXECUTION DES MARCHES",
+              "content": "Les marchés de NAFTAL sont conclus avant tout commencement d'exécution des prestations. En cas de péril menaçant un investissement, un bien ou les personnes et lorsque l'urgence n'est pas de nature à permettre la formalisation d'un Marché, le Directeur de Branche, le Directeur Exécutif et le Directeur Central ou de soutien peuvent, par décision motivée et après accord préalable du Président Directeur Général, autoriser le commencement d'exécution des prestations avant la conclusion du Marché. En tout état de cause, l'accord des deux parties au Marché est confirmé par un échange de lettres et un Marché de régularisation est établi et transmis au plus tard dans un délai de six (06) mois à compter de la date de signature de la décision susvisée, à la Commission des Marchés compétente pour information.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-5",
+              "article_number": "5",
+              "article_title": "COORDINATION DES COMMANDES",
+              "content": "La coordination des commandes regroupe plusieurs structures contractantes achetant des fournitures et/ou de prestations de mêmes nature dans le cadre d'un marché global afin d'assurer une économie d'échelle. Il permet à une Structure Contractante désignée comme Structure Contractante Centralisatrice de coordonner les besoins de plusieurs Structures Contractantes et de procéder à l'organisation de la procédure de sélection du ou des partenaire(s) contractant(s) et la signature du contrat. Les commissions de validation technique des dossiers d'appels d'offres, de contrôle interne et de conformité sont celles compétentes pour les marchés de la Structure Contractante Centralisatrice. Les modalités de sa mise en œuvre et de sa coordination sont laissées à la libre appréciation des structures contractantes.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-6",
+              "article_number": "6",
+              "article_title": "DOSSIER D'APPEL D'OFFRES",
+              "content": "Les Dossiers d'Appels d'Offres, élaborés sur la base des Dossiers Types d'Appel d'Offres et actualisés périodiquement, précisent les conditions dans lesquelles les marchés sont passés et exécutés. La Structure Contractante est tenue d'adapter le Dossier Type d'Appel d'Offres de NAFTAL aux conditions particulières des marchés et introduire les aménagements requis pour le Marché considéré. Le Dossier Type d'Appel d'Offres est destiné à la Structure Contractante pour lui permettre notamment l'élaboration d'un Dossier d'Appel d'Offres par Marché et la définition des relations entre la Structure Contractante et les Soumissionnaires ou candidats dans le cadre d'instructions générales aux Soumissionnaires, de données particulières à chaque appel d'offres, de projets de contrats et de modèles de documents.",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title_id": "TITRE II",
+      "title_name": "DE LA DETERMINATION DES MARCHES ET DES PARTENAIRES COCONTRACTANTS",
+      "sections": [
+        {
+          "section_id": "SECTION 1",
+          "section_name": "DES MARCHES",
+          "articles": [
+            {
+              "article_id": "ART-7",
+              "article_number": "7",
+              "article_title": "CHOIX DU NOMBRE DE MARCHES",
+              "content": "En vue de la satisfaction d'un besoin déterminé de fonctionnement ou d'investissement, la Structure Contractante peut passer un ou plusieurs marchés.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-8",
+              "article_number": "8",
+              "article_title": "TYPOLOGIE ET DEFINITIONS DES MARCHES",
+              "content": "Les marchés portent sur une ou plusieurs des opérations suivantes: la réalisation de Travaux; l'acquisition de Fournitures; la réalisation d'Etudes et Services de Conseil; la prestation de Services. Le marché de travaux a pour objet la construction, la rénovation, l'entretien, la réhabilitation, l'aménagement, la restauration, la réparation, le confortement ou la démolition d'un ouvrage ou partie d'ouvrage, y compris les équipements associés nécessaires à leur exploitation. Le marché de fournitures a pour objet l'acquisition, la location ou la location-vente, avec ou sans option d'achat, par la Structure Contractante, de matériels ou de produits destinés à satisfaire les besoins liés à son activité. Le marché d'études a pour objet de faire des études de maturation, et éventuellement d'exécution, de projets ou de programme d'équipements. Le marché de services de Conseil a pour objet de réaliser tout service à caractère intellectuel et immatériel tels que les services de consulting, de formation, de communication, de gestion, de supervision de travaux et de services financiers. Le marché de prestations de services est un marché autre que le marché de travaux, de fournitures ou d'études et Services de Conseil.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-9",
+              "article_number": "9",
+              "article_title": "L'ALLOTISSEMENT",
+              "content": "Les besoins à satisfaire de la Structure Contractante, exprimés en lot unique ou en lots séparés, sont préalablement déterminés avant le lancement de tout processus de passation des Marchés. L'allotissement doit être prévu dans le Dossier d'Appel d'Offres.",
+              "subsections": [
+                {
+                  "subtitle": "9.1",
+                  "text": "Les besoins à satisfaire de la Structure Contractante, exprimés en lot unique ou en lots séparés, sont préalablement déterminés avant le lancement de tout processus de passation des Marchés. L'allotissement doit être prévu dans le Dossier d'Appel d'Offres. Les besoins doivent être établis avec précision, en nature et en quantité par référence à des spécifications techniques détaillées, établies sur la base de normes ou de performances à atteindre. Dans le cas d'un allotissement des besoins, il est tenu compte pour la détermination des seuils de compétence des Commissions des Marchés du montant cumulé de tous les lots."
+                },
+                {
+                  "subtitle": "9.2",
+                  "text": "Le recours à l'allotissement, à effectuer chaque fois que cela est possible, en fonction de la nature et de l'importance des besoins, doit tenir compte des avantages économiques, financiers et/ou techniques que cet allotissement lui procure."
+                },
+                {
+                  "subtitle": "9.3",
+                  "text": "La satisfaction des besoins visée à l'alinéa 9.1 peut s'effectuer sous forme de lot unique ou de lots séparés. Le lot unique est attribué à un Partenaire Cocontractant. Les lots séparés sont attribués à un ou plusieurs Partenaires Cocontractants. Dans ce cas, l'évaluation des offres doit se faire lot par lot."
+                },
+                {
+                  "subtitle": "9.4",
+                  "text": "Le Dossier d'Appel d'Offres peut laisser aux candidats le choix de soumissionner pour un seul lot ou plusieurs lots avec une seule et même date limite de dépôt des offres. Dans le cas où le Dossier d'Appel d'Offres prévoit des soumissions sur plusieurs lots, les offres devront être déposées sous plis séparés et identifiés distinctement par lot."
+                },
+                {
+                  "subtitle": "9.5",
+                  "text": "L'allotissement du marché relève de la compétence de la Structure Contractante. Dans le cas d'un allotissement des besoins, le montant total de tous les lots détermine la Commission des Marchés compétente."
+                },
+                {
+                  "subtitle": "9.6",
+                  "text": "Dans le respect des exigences ci-dessus, si plusieurs lots sont attribués à un même Partenaire Cocontractant, il est toutefois possible de ne signer avec ce titulaire qu'un seul marché regroupant tous ces lots."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-10",
+              "article_number": "10",
+              "article_title": "CONTRATS PROGRAMMES ET CONTRATS A COMMANDES",
+              "content": "La Structure Contractante a également la possibilité de recourir, selon le cas, à la passation de contrats-programme ou de contrat à commandes totales ou partielles.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-11",
+              "article_number": "11",
+              "article_title": "RECOURS AUX CONTRATS PROGRAMMES",
+              "content": "Le contrat programme revêt la forme d'une convention annuelle ou pluriannuelle de référence, qui peut ne pas coïncider avec l'année budgétaire. L'exécution du contrat programme se réalise à travers la conclusion de contrats d'application conformément aux dispositions de la présente procédure. Le contrat programme porte sur une durée qui ne peut excéder cinq (5) ans.",
+              "subsections": [
+                {
+                  "subtitle": "11.1 FORME ET CONCLUSION DU CONTRAT PROGRAMME",
+                  "text": "Le contrat programme revêt la forme d'une convention annuelle ou pluriannuelle de référence, qui peut ne pas coïncider avec l'année budgétaire. L'exécution du contrat programme se réalise à travers la conclusion de contrats d'application conformément aux dispositions de la présente procédure. Le contrat programme porte sur une durée qui ne peut excéder cinq (5) ans. Cette convention définit la nature et l'importance des prestations à réaliser, la localisation, le montant du contrat programme et l'échéancier de réalisation. L'attribution du contrat programme à plusieurs Soumissionnaires peut intervenir soit à l'issue d'un processus de pré-qualification ou à l'issue de la phase de l'évaluation technique d'un appel d'offres. Le contrat programme est conclu avec des entreprises de droit algérien qualifiées."
+                },
+                {
+                  "subtitle": "11.2 MODE DE PASSATION DES CONTRATS PROGRAMMES",
+                  "text": "Les contrats programmes définis ci-dessus sont passés dans les conditions prévues dans la présente procédure. La Structure Contractante peut, au titre de ces contrats, prévoir un minimum et un maximum en valeur et en quantité ou encore les conclure sans engagement précis. Les contrats d'application passés sur la base d'un contrat programme sont des contrats écrits qui précisent les caractéristiques et les modalités d'exécution et de mise en œuvre. Lorsqu'un contrat programme est attribué à plusieurs Partenaires Cocontractants, ceux-ci sont au moins au nombre de trois (03). Le seuil de compétence des Commissions des Marchés est déterminé par référence aux limites maximales en valeur du contrat programme."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-12",
+              "article_number": "12",
+              "article_title": "CONTRATS A COMMANDES",
+              "content": "Le contrat à commandes porte sur la réalisation de travaux, l'acquisition de fournitures ou la prestation de services, de type courant et à caractère répétitif. Le contrat à commandes porte sur une durée d'une année renouvelable et ne peut excéder cinq (5) ans.",
+              "subsections": [
+                {
+                  "subtitle": "12.1 FORME ET CONCLUSION D'UN CONTRAT A COMMANDES",
+                  "text": "Le contrat à commandes porte sur la réalisation de travaux, l'acquisition de fournitures ou la prestation de services, de type courant et à caractère répétitif. Il porte sur une durée d'une année renouvelable ne pouvant excéder cinq (5) ans. Le contrat à commandes doit comporter l'indication en quantité et/ou en valeur des limites minimales ou maximales des travaux, fournitures et/ou services objet du marché. L'exécution du contrat à commandes intervient par la simple notification de commandes partielles qui fixent les modalités de livraison."
+                },
+                {
+                  "subtitle": "12.2 MODALITES DE MISE EN OEUVRE DU CONTRAT A COMMANDES",
+                  "text": "Le contrat à commandes est conclu avec un ou plusieurs Partenaires Cocontractants et exécuté au fur et à mesure de l'émission de bons de commande. L'émission des bons de commande s'effectue sans négociation ni remise en concurrence préalable des titulaires de Contrats à Commandes. Les bons de commande sont des documents écrits adressés aux titulaires du marché précisant les prestations décrites dans le contrat à commandes dont l'exécution est demandée. L'émission des bons de commande ne peut intervenir que pendant la durée de validité du contrat à commandes."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-13",
+              "article_number": "13",
+              "article_title": "MARCHES DE CONCEPTION/REALISATION",
+              "content": "La Structure Contractante peut, exceptionnellement, recourir à la passation de marchés de conception/réalisation, marchés portant à la fois sur l'établissement des études Front End Engineering Design (FEED) et la réalisation de l'ouvrage lorsque des motifs d'ordre technique et/ou de délais de réalisation du marché rendent nécessaires l'association de l'Entrepreneur aux études de l'ouvrage. Le marché de Conception/Réalisation est un Marché de Travaux, dit à responsabilité unique. Le marché de Conception/Réalisation pour lequel une mise en concurrence entre plusieurs Entrepreneurs (2 ou 3 Entrepreneurs au maximum) pour la phase FEED suivi d'une offre de prix EPC pour la phase réalisation est qualifié de FEED compétitif. Dans le cas d'un FEED compétitif, la Structure Contractante peut verser une rémunération aux Entrepreneurs réalisant la phase FEED. La procédure du FEED Compétitif sera précisée par décision du Président Directeur Général.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 2",
+          "section_name": "DES PARTENAIRES COCONTRACTANTS",
+          "articles": [
+            {
+              "article_id": "ART-14",
+              "article_number": "14",
+              "article_title": "FORME JURIDIQUE DES PARTENAIRES",
+              "content": "Le Partenaire Cocontractant peut être une ou plusieurs personne(s) physique(s) ou morale(s) s'engageant au titre du marché soit individuellement, soit dans le cadre d'un groupement d'entreprises, tel que défini à l'article 41 ci-dessous.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-15",
+              "article_number": "15",
+              "article_title": "CANDIDATURE DES ENTREPRISES",
+              "content": "Les appels d'offres de NAFTAL sont ouverts à tout Soumissionnaire dont les capacités et les qualifications répondent aux exigences de la Structure Contractante spécifiées dans le Dossier d'Appel d'Offres. Par exception à ce principe: a) aucune entreprise engagée par la Structure Contractante afin de fournir des études et/ou de services de conseil pour la préparation ou l'exécution d'un projet ne sera admise à fournir des biens ou des prestations au titre du même projet. b) une entreprise exclue par le groupe Sonatrach ne sera pas admise à retirer le Dossier d'Appel d'Offres et ne pourra soumissionner ou se voir attribuer un marché pendant toute la période de son exclusion.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-16",
+              "article_number": "16",
+              "article_title": "STATUTS DES PARTENAIRES COCONTRACTANTS",
+              "content": "Pour la réalisation de ses objectifs, la Structure Contractante peut recourir, en vue de l'exécution de ses prestations, à la passation de marchés conclus avec des entreprises de droit algérien et des entreprises étrangères.",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title_id": "TITRE III",
+      "title_name": "DES PROCEDURES DE SELECTION DU PARTENAIRE COCONTRACTANT",
+      "sections": [
+        {
+          "section_id": "SECTION 1",
+          "section_name": "DES MODES DE PASSATION DES MARCHES",
+          "articles": [
+            {
+              "article_id": "ART-17",
+              "article_number": "17",
+              "article_title": "REGLE GENERALE",
+              "content": "Les marchés sont passés selon la procédure d'appel d'offres, qui constitue la règle générale ou la procédure de gré à gré. La recherche des conditions les plus adaptées aux objectifs assignés à la Structure Contractante, dans le cadre de sa mission, détermine le choix du mode de passation. Ce choix relève de la compétence de la Structure Contractante agissant conformément aux dispositions de la présente procédure.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-18",
+              "article_number": "18",
+              "article_title": "DEFINITION DE L'APPEL D'OFFRES",
+              "content": "L'appel d'offres est la procédure visant à obtenir les offres de plusieurs Soumissionnaires entrant en concurrence et à attribuer le marché au Soumissionnaire dont l'offre est jugée la plus favorable.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-19",
+              "article_number": "19",
+              "article_title": "DEFINITION DU GRE A GRE",
+              "content": "Le gré à gré est la procédure d'attribution d'un marché à un Partenaire Cocontractant sans appel formel à la concurrence. Le gré à gré peut revêtir la forme d'un gré à gré simple ou la forme d'un gré à gré après consultation. Cette consultation est organisée par tous moyens écrits appropriés. La procédure du gré à gré simple est une règle de passation de contrat exceptionnelle, qui ne peut être retenue que dans les cas énumérés à l'article 26 de la présente procédure.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-20",
+              "article_number": "20",
+              "article_title": "FORMES DE L'APPEL D'OFFRES",
+              "content": "L'appel d'offres peut être national et/ou international, il peut se faire sous l'une des formes suivantes: L'appel d'offres ouvert; L'appel d'offres restreint; La consultation sélective; Le concours.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-21",
+              "article_number": "21",
+              "article_title": "DEFINITION DE L'APPEL D'OFFRES OUVERT",
+              "content": "L'appel d'offres ouvert est la procédure selon laquelle tout candidat peut soumissionner.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-22",
+              "article_number": "22",
+              "article_title": "DEFINITION DE L'APPEL D'OFFRES RESTREINT",
+              "content": "L'appel d'offres restreint est la procédure selon laquelle seuls les candidats répondant à certaines conditions minimales d'éligibilité, préalablement définies par la Structure Contractante, peuvent soumissionner. Les conditions minimales exigibles, en matière de qualification, de classification et de références professionnelles, doivent être proportionnées à la nature, la complexité et l'importance du projet, de manière à permettre aux entreprises de droit algérien de participer aux appels d'offres, dans le respect des conditions optimales relatives à la qualité, au coût et au délai de réalisation.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-23",
+              "article_number": "23",
+              "article_title": "CONSULTATION SELECTIVE",
+              "content": "La Consultation Sélective est la procédure selon laquelle seuls les candidats retenus après pré-qualification, sont invités et autorisés à soumissionner, à l'occasion de Marchés Complexes et/ou d'Envergure. La Structure Contractante peut également procéder à une Consultation Sélective auprès de candidats pré-qualifiés et inscrits sur une liste, qu'elle a dressée auparavant sur la base d'une pré-qualification engagée à l'occasion de travaux, de services et d'acquisition de fournitures à caractère répétitif. La Consultation Sélective doit s'adresser à un minimum de trois (03) candidats pré-qualifiés. Dans le cas où le nombre de candidats pré-qualifiés est inférieur à trois (03), la Structure Contractante doit relancer le processus de pré-qualification.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-24",
+              "article_number": "24",
+              "article_title": "PROCESSUS DE PRE QUALIFICATION",
+              "content": "Le recours à la pré-qualification des Fournisseurs ou Entrepreneurs ou Prestataires doit être privilégié pour les marchés de travaux, fournitures et services simples et/ou à caractère répétitif. La pré-qualification est mise en œuvre par la Structure Contractante pour la sélection de candidats en vue de l'établissement d'une liste non restrictive de candidats potentiels et qualifiés.",
+              "subsections": [
+                {
+                  "subtitle": "24.1 POUR LES MARCHES DE TRAVAUX, FOURNITURES ET SERVICES A CARACTERE REPETITIF",
+                  "text": "Le recours à la pré-qualification des Fournisseurs ou Entrepreneurs ou Prestataires doit être privilégié pour les marchés de travaux, fournitures et services simples et/ou à caractère répétitif. La pré-qualification est mise en œuvre par la Structure Contractante pour la sélection de candidats en vue de l'établissement d'une liste non restrictive de candidats potentiels et qualifiés à consulter à l'occasion des marchés simples et/ou à caractère répétitif. Pour les marchés de Travaux, la Structure Contractante doit procéder au classement des entreprises pré-qualifiées selon la capacité technique et financière en quatre classes. Les candidats ayant satisfait aux critères de pré-qualification seront invités à participer à la consultation sélective et à soumissionner selon le processus en deux (02) étapes. La pré-qualification doit être renouvelée périodiquement sans que cette périodicité n'excède six (06) mois."
+                },
+                {
+                  "subtitle": "24.2 POUR LES MARCHES COMPLEXES ET/OU D'ENVERGURE",
+                  "text": "Dans le cas où la Structure Contractante opte pour une pré-qualification de candidats en vue d'une consultation sélective à l'occasion d'un projet complexe et/ou d'envergure, cette pré-qualification est mise en œuvre selon des conditions spécifiques. Pour chaque processus de pré-qualification, la Structure Contractante doit mettre un dossier de pré-qualification contenant les informations relatives à l'étendue des travaux à réaliser. La pré-qualification des candidats doit résulter de leur aptitude à réaliser le marché, à l'appui de la présentation de documents relatifs à leurs références, capacités en termes de personnel, de matériels et équipements, situations financières, et la nature et l'ampleur des litiges antérieurs et en cours. La durée du maintien des candidats pré-qualifiés ne saurait excéder un (01) an."
+                },
+                {
+                  "subtitle": "24.3 POUR LES MARCHES D'ETUDES ET SERVICES DE CONSEILS",
+                  "text": "La pré-qualification vise à établir une liste non restrictive de Consultants ayant des qualifications leur permettant de répondre aux besoins et exigences de la Structure Contractante pour la réalisation d'Etudes et de Services de Conseil et permet la mise à jour du fichier de Consultants. Le fichier de Consultants est établi sur la base des processus périodiques de pré-qualification après publication d'appels à manifestation d'intérêt. Lorsque le montant estimé de l'opération est inférieur à soixante-quinze (75) millions de dinars algériens, la Structure Contractante peut dresser sa liste sur la base du fichier de Consultants sans avoir à recourir préalablement à un appel à manifestation d'intérêt. Lorsque le montant estimé est égal ou supérieur à soixante-quinze (75) millions de dinars algériens, il doit être procédé au lancement d'un appel à manifestation d'intérêt."
+                },
+                {
+                  "subtitle": "24.4 CONDUITE DE LA PRE-QUALIFICATION",
+                  "text": "La Structure Contractante procède au lancement d'un avis à pré-qualification, qu'elle publie obligatoirement au BAOSEM. Le lancement de l'appel à pré-qualification ne peut intervenir qu'après l'obtention du visa du Comité de Validation Technique des Dossiers d'Appels d'Offres compétent. Le Candidat est responsable de la préparation et de la soumission de son dossier de candidature. La Structure Contractante, par le biais d'une commission ad-hoc, procède à l'ouverture des dossiers de candidature et à l'évaluation des qualifications de chaque candidat au vu des critères exigés dans le dossier de pré-qualification. A l'issue de cette évaluation, la commission ad-hoc établit un rapport d'évaluation qui fera ressortir la liste des candidats pré-qualifiés, celle des dossiers de candidatures rejetés ainsi que les motifs de rejet y afférents."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-25",
+              "article_number": "25",
+              "article_title": "DEFINITION ET DEROULEMENT DU CONCOURS",
+              "content": "Le concours est la procédure de mise en concurrence d'hommes de l'art en vue de la réalisation d'une opération comportant des aspects techniques, économiques, esthétiques ou artistiques particuliers. Le dossier de concours doit comporter un programme du projet, un règlement du concours ainsi que les conditions techniques et autres indications pertinentes arrêtées par la Structure Contractante. Dans une première phase, les candidats sont invités à remettre uniquement une offre technique. Après évaluation, seuls les candidats pré qualifiés, dont le nombre ne doit pas être inférieur à trois (3), sont invités à remettre les plis des prestations et de l'offre financière. Les prestations du concours sont évaluées par un jury composé de membres qualifiés dans le domaine considéré et indépendants des candidats. La Structure Contractante peut verser des primes au(x) lauréat(s) du concours.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-26",
+              "article_number": "26",
+              "article_title": "RECOURS AU GRE A GRE SIMPLE",
+              "content": "La Structure Contractante a recours au gré à gré simple dans les cas suivants: quand les marchés ne peuvent être exécutés que par un Partenaire Cocontractant unique qui détient soit une situation monopolistique soit, à titre exclusif, le procédé technologiquement retenu; lorsque suite à un appel d'offres infructueux, il devient indispensable au vu de l'urgence de conclure le marché; quand les marchés doivent être exécutés d'urgence motivée par un danger imminent; quand les prestations sont exécutées dans le cadre des dispositions de l'article 4; quand un texte législatif ou réglementaire attribue à un établissement public un droit exclusif; quand il s'agit d'opérations ou de prestations qui nécessitent un prolongement de prestations; quand il s'agit d'opérations d'achat pour compte exigé par la clientèle; quand il s'agit de promouvoir l'outil national de production; quand il s'agit de marchés d'Etudes et Services de Conseil jugés stratégiques.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-27",
+              "article_number": "27",
+              "article_title": "RECOURS AU GRE A GRE APRES CONSULTATION",
+              "content": "La Structure Contractante a recours au gré à gré après consultation dans les cas suivants: quand l'appel d'offres est infructueux dans les conditions fixées à l'article 28; lorsque des marchés déjà attribués ont fait l'objet d'une mesure de résiliation et dont les délais de reprise ne s'accommodent pas aux délais d'un nouvel appel d'offres; pour les marchés d'études et Services de Conseil, de fournitures et de services spécifiques dont la nature ne nécessite pas le recours à un appel d'offres. La Structure Contractante doit consulter par écrit tous les Soumissionnaires qui ont répondu à l'appel d'offres initial. En tout état de cause, cette consultation doit s'adresser au minimum à trois (03) Soumissionnaires. L'attribution provisoire du marché doit faire l'objet d'une publication.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 2",
+          "section_name": "DES ANNULATIONS ET DES CAS D'APPELS D'OFFRES INFRUCTUEUX",
+          "articles": [
+            {
+              "article_id": "ART-28",
+              "article_number": "28",
+              "article_title": "CAS DE L'APPEL D'OFFRES INFRUCTUEUX",
+              "content": "L'appel d'offres est infructueux dans les cas suivants: lorsque l'appel d'offres n'a donné lieu à aucune soumission; lorsque l'appel d'offres a donné lieu à la réception de moins de deux (02) soumissions; lorsqu'à l'issue de l'évaluation technique ou financière, moins de deux (02) offres sont déclarées conformes aux exigences du Dossier d'Appel d'Offres. En cas de réception d'un seul pli, l'appel d'offres est déclaré infructueux et le pli est retourné non ouvert au Soumissionnaire concerné. Lorsque l'appel d'offres est déclaré infructueux, la Structure Contractante peut soit relancer la procédure d'appel d'offres ou lancer la procédure de gré à gré dans les conditions fixées aux articles 26 et 27.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-29",
+              "article_number": "29",
+              "article_title": "ANNULATION DE L'APPEL D'OFFRES",
+              "content": "La Structure Contractante peut annuler l'appel d'offres sous réserve de l'exercer: avant l'ouverture des plis contenant les offres financières quel que soit le processus d'appel d'offres retenu; suite à un recours d'un Soumissionnaire déclaré fondé par la Commission des Marchés compétente; en cas de refus de visa d'attribution définitive par la Commission des Marchés compétente. La Structure Contractante doit annuler la procédure d'appel d'offres lorsque la finalisation s'avère préjudiciable à la Société suite à des développements imprévus ou si le prix de l'offre retenue provisoirement est anormalement supérieur aux prix moyens du Marché.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 3",
+          "section_name": "DES DOSSIERS D'APPELS D'OFFRES",
+          "articles": [
+            {
+              "article_id": "ART-30",
+              "article_number": "30",
+              "article_title": "CONTENU DE L'AVIS D'APPEL D'OFFRES",
+              "content": "L'avis d'appel d'offres doit comporter les mentions obligatoires suivantes: la dénomination, l'adresse et le numéro d'identification fiscale (NIF) de l'Entreprise; la référence de l'appel d'offres; l'objet de l'opération; le mode d'appel d'offres; le type de processus; les conditions d'éligibilité ou de présélection; la liste sommaire des pièces exigées; la durée de préparation des offres; la date de remise des offres; lieu de retrait des Dossiers d'appels d'Offres et de dépôt des offres; la durée de validité des offres; l'obligation de caution de soumission; la présentation sous double pli cacheté; le prix de la documentation lorsqu'un paiement est requis.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-31",
+              "article_number": "31",
+              "article_title": "MISE A DISPOSITION DU DOSSIER D'APPEL D'OFFRES",
+              "content": "La Structure Contractante tient à la disposition de toute entreprise admise à soumissionner, le Dossier d'Appel d'Offres prévu à l'article 57 ci-dessous. Cette documentation peut être communiquée au Soumissionnaire qui en fait la demande y compris par voie électronique.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-32",
+              "article_number": "32",
+              "article_title": "ELABORATION DU DOSSIER D'APPEL D'OFFRES",
+              "content": "Le Dossier d'Appel d'Offres doit être rédigé de façon à susciter la concurrence la plus large possible. Il doit décrire clairement et avec précision les travaux, les services à réaliser, les fournitures et leur lieu de livraison ou d'installation, les délais d'exécution ou de livraison, ainsi que toutes autres conditions et modalités nécessaires.",
+              "subsections": [
+                {
+                  "subtitle": "32.1 CONSIDERATIONS GENERALES",
+                  "text": "Le Dossier d'Appel d'Offres doit être rédigé de façon à susciter la concurrence la plus large possible. Il doit décrire clairement et avec précision les travaux, les services à réaliser, les fournitures et leur lieu de livraison ou d'installation, les délais d'exécution ou de livraison, ainsi que toutes autres conditions et modalités nécessaires. Le Dossier d'Appel d'Offres doit indiquer la nature du marché à conclure et les dispositions contractuelles générales et particulières applicables au marché. Il doit également indiquer tous les critères de qualification et de conformité technique qui seront pris en considération lors de l'évaluation des offres."
+                },
+                {
+                  "subtitle": "32.2 CONTENU DU DOSSIER D'APPEL D'OFFRES",
+                  "text": "Le Dossier d'Appel d'Offres doit contenir les documents et les informations nécessaires à l'élaboration et relatives au marché objet de l'appel d'offres. Tout Dossier d'Appel d'Offres doit comprendre: l'Avis d'Appel d'Offres; les Instructions aux Soumissionnaires (IS); les Données Particulières de l'Appel d'Offres (DPAO); le projet de contrat comportant des clauses juridiques et commerciales visant la législation en vigueur."
+                },
+                {
+                  "subtitle": "32.3 CLARIFICATIONS DU DOSSIER D'APPELS D'OFFRES",
+                  "text": "Tous les soumissionnaires qui ont retiré le Dossier d'Appel d'Offres doivent recevoir par écrit les mêmes informations et avoir la possibilité d'obtenir toute information complémentaire. Les réponses aux demandes de clarifications se font par écrit et sont adressées à tous les Soumissionnaires sans que l'identité de l'auteur de la demande ne soit mentionnée. Les modifications ou rectifications au Dossier d'Appel d'Offres doivent intervenir avant la date limite de remise des offres et sont formalisées par voie d'additif."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-33",
+              "article_number": "33",
+              "article_title": "ANNONCE ET PUBLICITE",
+              "content": "Tout avis d'appel d'offres émis par la Structure Contractante est publié obligatoirement au BAOSEM. La Structure Contractante peut, aussi, recourir à la publicité par voie de presse dans un ou deux quotidiens nationaux. La première parution fait foi. La publication est obligatoire pour les cas suivants: l'avis d'appel d'offres ouvert; l'avis d'appel d'offres restreint; l'avis d'appel à pré-qualification; l'avis de concours; l'avis d'appel à manifestation d'intérêt; le résultat de l'appel à pré-qualification; l'avis de prorogation des délais; l'avis d'additif au dossier d'appel d'offres; l'avis d'attribution provisoire du Marché; l'avis d'infructuosité; l'avis d'annulation.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-34",
+              "article_number": "34",
+              "article_title": "DELAIS DE PREPARATION DES OFFRES",
+              "content": "La durée de préparation des offres est fixée par la Structure Contractante en fonction d'éléments pertinents tels que la complexité de l'objet du marché projeté et le temps normalement nécessaire pour la préparation des offres et l'acheminement des soumissions. La Structure Contractante peut, quand les circonstances le justifient, proroger la durée de préparation des offres avant la date prévue pour la remise des offres. En tout état de cause, la durée de préparation des offres doit permettre la concurrence la plus large possible et en règle générale, elle ne devrait être inférieure à trois (03) semaines.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-35",
+              "article_number": "35",
+              "article_title": "CONTENU DES OFFRES TECHNIQUES ET FINANCIERES",
+              "content": "Chaque offre est insérée dans une enveloppe fermée et cachetée, indiquant la référence et l'objet de l'appel d'offres, ainsi que la mention technique ou financière selon le cas. Les deux enveloppes sont mises dans une autre enveloppe anonyme comportant la mention à ne pas ouvrir que par la Commission d'Ouverture des Plis. 1- Une offre technique qui contient: une déclaration à souscrire; lettre de soumission offre technique; déclaration de probité; une caution de soumission; l'offre technique proprement dite; tous les documents afférents aux qualifications, certifications et expérience du Soumissionnaire; les attestations fiscales et des organismes de sécurité sociale; le numéro d'identification fiscale (NIF) pour les Soumissionnaires nationaux. 2- Une offre financière qui contient: la lettre de soumission offre financière; lettre d'engagement; la décomposition du montant de l'offre financière et le bordereau des prix unitaires.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 4",
+          "section_name": "DES EXCLUSIONS DE LA PARTICIPATION AUX MARCHES DE NAFTAL",
+          "articles": [
+            {
+              "article_id": "ART-36",
+              "article_number": "36",
+              "article_title": "REGLES D'EXCLUSION DES MARCHES DE NAFTAL",
+              "content": "Sont exclus, à titre conservatoire, temporairement ou définitivement, de la participation aux marchés de NAFTAL, les entreprises qui proposent des offres anormalement bas aux prix moyens de marchés; qui se sont désistées après attribution d'un marché; qui ont manqué à leurs obligations contractuelles ayant donné lieu à une décision de résiliation; inscrites au fichier national des fraudeurs, auteurs d'infractions graves aux législations et réglementations fiscales, douanières et commerciales; qui ont fourni délibérément des informations et/ou documents qui sont avérés inexacts; qui commettent des manœuvres frauduleuses notamment une présentation erronée des faits, une entente illicite avec un ou plusieurs autres Soumissionnaires au préjudice de la Structure Contractante, ou une tentative visant à influer sur l'évaluation et la décision d'attribution des marchés; en état de faillite, de liquidation, de cessation d'activités, de règlement judiciaire ou de concordat; qui ont fait l'objet d'un jugement constatant un délit affectant leur probité professionnelle; qui ont fait l'objet d'une condamnation pour infraction grave à la législation du travail et de la sécurité sociale.",
+              "subsections": [
+                {
+                  "subtitle": "36.1",
+                  "text": "Sont exclus, à titre conservatoire, temporairement ou définitivement, de la participation aux marchés de NAFTAL les entreprises répondant aux critères d'exclusion énumérés ci-dessus. Les recours infondés et/ou intempestifs, préjudiciables à Naftal peuvent entraîner, à sa seule discrétion, des mesures d'exclusion temporaires ou définitives. Une note du Président Directeur Général précisera les durées d'exclusion correspondant aux situations susvisées."
+                },
+                {
+                  "subtitle": "36.2",
+                  "text": "La Structure Contractante ayant constaté un manquement ou une situation d'exclusion communique à la Commission des Marchés Entreprise un dossier documenté sous pli confidentiel comportant notamment: l'identification exacte du Soumissionnaire et/ou Partenaire Cocontractant défaillant; les pièces et/ou informations justifiant le manquement; une proposition de sanction; les mesures conservatoires éventuellement prises."
+                },
+                {
+                  "subtitle": "36.3",
+                  "text": "Le traitement de la demande d'exclusion incombe à la Commission des Marchés Entreprise qui se prononcera à l'issue de l'examen approfondi dudit dossier."
+                },
+                {
+                  "subtitle": "36.4",
+                  "text": "La décision est notifiée à la Structure Contractante émettrice de la proposition d'exclusion avec ampliation à la Direction Marchés."
+                },
+                {
+                  "subtitle": "36.5",
+                  "text": "Dès réception de cette notification, la Structure Contractante qui recommande la proposition d'exclusion doit notifier en recommandé avec accusé de réception la sanction définitive à la Personne concernée en tenant informé la Direction Marchés."
+                },
+                {
+                  "subtitle": "36.6",
+                  "text": "La Direction Marchés saisit la Direction Centrale des Marchés et logistique de Sonatrach pour l'élargissement de ladite décision à tout le groupe Sonatrach."
+                },
+                {
+                  "subtitle": "36.7",
+                  "text": "A la fin de la durée d'exclusion, la Direction Marchés informe toutes les Structures et Activités de la levée de la sanction avec ampliation à la Direction Centrale des Marchés et logistique de Sonatrach."
+                },
+                {
+                  "subtitle": "36.8",
+                  "text": "La Direction Marchés tient à jour un Fichier Central des entreprises exclues des marchés du groupe Sonatrach et en assure la diffusion."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 5",
+          "section_name": "DU CHOIX DU PARTENAIRE COCONTRACTANT",
+          "articles": [
+            {
+              "article_id": "ART-37",
+              "article_number": "37",
+              "article_title": "PROMOTION DE L'OUTIL NATIONAL ET MAIN D'OEUVRE LOCALE",
+              "content": "Lorsque la production nationale ou l'outil de production national est en mesure de répondre aux besoins à satisfaire de la Structure Contractante, la Structure Contractante doit privilégier le lancement d'un appel d'offres national. Il est exigé des Soumissionnaires de maximiser l'utilisation de la main d'œuvre algérienne et principalement locale pour l'ensemble des postes de travail prévus au titre du marché. Le Dossier d'Appel d'Offres doit indiquer clairement l'obligation faite au Partenaire Cocontractant d'utiliser en priorité la main d'œuvre nationale et de ne recourir à la main d'œuvre étrangère que sur la base d'une production des documents de l'Agence Nationale de l'Emploi attestant de la non disponibilité de ressources locales.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-38",
+              "article_number": "38",
+              "article_title": "ACTIVITES ARTISANALES D'ART",
+              "content": "Les travaux liés aux activités artisanales d'art sont réservés aux artisans tels que définis par la législation et la réglementation en vigueur, sauf cas d'impossibilité dûment justifiée par la Structure Contractante.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-39",
+              "article_number": "39",
+              "article_title": "CRITERES DE CHOIX DU PARTENAIRE COCONTRACTANT",
+              "content": "L'examen et la comparaison des offres financières doit permettre à la Structure Contractante de déterminer la meilleure offre selon la nature du marché considéré.",
+              "subsections": [
+                {
+                  "subtitle": "39.1 Pour les marchés de travaux, fournitures et services simples ou à caractère répétitif",
+                  "text": "L'examen et la comparaison des offres financières doit permettre à la Structure Contractante de déterminer l'offre la moins-disante, sur la base du critère unique du prix."
+                },
+                {
+                  "subtitle": "39.2 Pour les Marchés Complexes et/ou d'Envergure",
+                  "text": "L'examen et la comparaison des offres financières doit permettre à la Structure Contractante de déterminer l'offre la moins disante ou l'offre économiquement la plus avantageuse sur la base des paramètres de sélection prévus dans le Dossier d'Appel d'Offres. Dans le cas de pondération technico-financière, le système de notation est basé notamment sur les garanties techniques et financières; le prix, la qualité et les délais d'exécution; les conditions de financement et la réduction de la part transférable; l'origine algérienne ou étrangère du produit et l'intégration à l'économie nationale."
+                },
+                {
+                  "subtitle": "39.3 Pour les marchés d'études et Services de Conseil",
+                  "text": "L'examen et la comparaison des offres financières doit permettre à la Structure Contractante de déterminer l'offre la mieux disante sur la base d'un système de pondération technico-financier. Le système de notation de l'offre technique doit être basé sur des critères contenus dans le Dossier d'Appel d'Offres dont les plus importants sont: les qualifications du personnel clé proposé; la qualité de la méthodologie proposée; l'expérience du Consultant dans le domaine; le transfert éventuel de connaissances; la participation locale; les délais de réalisation et les volumes horaires. Pour la pondération, le poids attribué à l'offre financière ne peut dépasser 30 points sur un total de 100."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-40",
+              "article_number": "40",
+              "article_title": "NEGOCIATION",
+              "content": "Aucune négociation n'est autorisée avec les Soumissionnaires, sauf dans les cas prévus par les dispositions de la présente procédure.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-41",
+              "article_number": "41",
+              "article_title": "GROUPEMENT D'ENTREPRISES OU CONSORTIUMS",
+              "content": "Lorsque l'intérêt de l'opération le justifie, la possibilité de soumissionner dans le cadre d'un groupement momentané d'entreprises ou d'un consortium d'entreprises, sous réserve du respect des règles relatives à la concurrence, doit être prévue dans le Dossier d'Appel d'Offres. Les Soumissionnaires dans le cadre d'un groupement momentané d'entreprises doivent intervenir sous la forme de groupement momentané d'entreprises solidaires et/ou de groupement momentané d'entreprises conjointes. Le groupement momentané d'entreprises est solidaire lorsque chacun des membres est engagé pour l'exécution de la totalité du marché. Le groupement momentané d'entreprises est conjoint lorsque chacun des membres s'engage à exécuter la ou les prestations qui sont susceptibles de lui être attribuées. L'un des membres du groupement majoritaire est désigné comme mandataire représentant l'ensemble des membres vis-à-vis de la Structure Contractante. Après la remise des offres, les Soumissionnaires ne sont pas autorisés à former un groupement momentané d'entreprises ou à changer ou modifier la structure de leur groupement.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-42",
+              "article_number": "42",
+              "article_title": "GARANTIES",
+              "content": "La Structure Contractante doit veiller à ce que soient réunies les garanties nécessaires permettant les meilleures conditions de choix de ses partenaires et/ou les meilleures conditions d'exécution du marché. Les garanties ainsi que les modalités de leur restitution sont fixées, selon le cas, dans les Dossiers d'Appels d'Offres ou dans les dispositions contractuelles du marché par référence aux dispositions légales ou réglementaires en vigueur.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-43",
+              "article_number": "43",
+              "article_title": "OBLIGATION POUR LES ENTREPRISES ETRANGERES D'ENGAGER LES MOYENS HUMAINS ET MATERIELS DECLARES DANS LEURS OFFRES",
+              "content": "Les entreprises étrangères Soumissionnaires, seules ou dans le cadre d'un groupement momentané d'entreprises, sont tenues d'engager les moyens humains et matériels déclarés dans leurs offres, sauf exception dûment motivée et approuvée préalablement, par la Structure Contractante. La Structure Contractante doit s'assurer de l'exécution effective de la présente disposition.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 6",
+          "section_name": "DE LA LUTTE CONTRE LA CORRUPTION",
+          "articles": [
+            {
+              "article_id": "ART-44",
+              "article_number": "44",
+              "article_title": "CODE D'ETHIQUE ET DE DEONTOLOGIE",
+              "content": "Un code d'éthique et de déontologie fixant les droits et obligations des agents lors du contrôle, la passation et l'exécution d'un marché, contrat ou avenant fera l'objet d'une décision du Président Directeur Général.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-45",
+              "article_number": "45",
+              "article_title": "REGLES D'ETHIQUE DE NAFTAL",
+              "content": "Les Fournisseurs et/ou Entrepreneurs et/ou Prestataires et/ou Consultants Soumissionnaires sont tenus, sous peine de sanctions, d'observer les règles d'éthique édictées par NAFTAL. Ces règles font partie intégrante du Dossier d'Appel d'Offres. En tout état de cause, sans préjudice de poursuites pénales, quiconque s'adonne à des actes ou à des manœuvres tendant à promettre d'offrir ou d'accorder à un agent de l'entreprise directement ou indirectement une rémunération ou un avantage de quelque nature que ce soit à l'occasion de la préparation, de la négociation, de la conclusion ou de l'exécution d'un marché, contrat ou avenant, constituerait un motif suffisant pour annuler le marché, le contrat ou l'avenant en cause et pour prendre toute autre mesure coercitive pouvant aller jusqu'à l'inscription sur la liste des entreprises exclues des marchés du groupe SONATRACH et la résiliation du marché.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-46",
+              "article_number": "46",
+              "article_title": "CAS DE CONFLITS D'INTERETS",
+              "content": "Les candidats qui soumissionnent aux marchés de NAFTAL ne doivent pas être en situation de conflit d'intérêt en relation avec le marché considéré. Dans le cas où cette situation se présente, ils doivent tenir informée la Structure Contractante. Les Partenaires Cocontractants de NAFTAL ayant pris connaissance de certaines informations qui pourraient les avantager lors de la soumission à un autre marché de NAFTAL ne peuvent y participer, sauf s'il est prouvé que les informations en leur possession ne faussent pas le libre jeu de la concurrence. Dans ce cas, la Structure Contractante est tenue de prouver que les informations communiquées ont été partagées avec les autres Soumissionnaires et qu'il a été rétabli ainsi l'égalité de traitement des Soumissionnaires.",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title_id": "TITRE IV",
+      "title_name": "DES PROCEDURES D'APPELS D'OFFRES",
+      "sections": [
+        {
+          "section_id": "SECTION 1",
+          "section_name": "DES MARCHES DE FOURNITURES, TRAVAUX ET DE SERVICES",
+          "articles": [
+            {
+              "article_id": "ART-47",
+              "article_number": "47",
+              "article_title": "SOUMISSION DES OFFRES",
+              "content": "Un Soumissionnaire ne peut présenter qu'une seule offre par appel d'offres comprenant un lot unique. Il doit soumissionner soit à titre individuel soit en qualité de membre d'un groupement momentané d'entreprises ou consortium d'entreprises ou association de Consultants. Aucun Soumissionnaire ne peut à la fois être sous-traitant pour des biens et/ou services et présenter une offre à titre individuel ou en qualité de membre d'un groupement dans le cadre d'un seul et même appel d'offres. Aucun Soumissionnaire ne peut présenter plusieurs offres ou participer, en qualité d'actionnaire exerçant le contrôle, à plus d'une offre.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-48",
+              "article_number": "48",
+              "article_title": "PROCESSUS D'APPELS D'OFFRES",
+              "content": "Pour les marchés de fournitures, de travaux et de services, le processus d'appel d'offres est réalisé en deux (02) étapes distinctes: Première étape: Réception et ouverture des plis, évaluation des offres techniques ne contenant aucune indication de l'offre de prix et déclaration d'éligibilité des Soumissionnaires à la remise d'une offre financière. Deuxième étape: Réception et ouverture des plis, évaluation et classement des offres financières et recommandation d'attribution du Marché. Les Soumissionnaires ne doivent en aucun cas porter des indications de leurs offres de prix dans leurs offres techniques, sous peine de rejet.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-49",
+              "article_number": "49",
+              "article_title": "OUVERTURE DES OFFRES TECHNIQUES",
+              "content": "La réception et l'ouverture des plis par la commission d'ouverture des plis (COP) a lieu à la date et adresse fixées par la Structure Contractante dans l'Avis d'appel d'offres et/ou dans l'Avis de prorogation de délai. Tout Soumissionnaire peut désigner une personne dûment mandatée pour le représenter à la séance d'ouverture des plis. Il est procédé à l'ouverture des offres techniques reçues séance tenante par la Commission d'Ouverture des Plis (COP). Le nom de chaque Soumissionnaire sera lu à haute voix et toutes les informations pertinentes seront consignées dans le procès-verbal de la séance. En cas de réception d'un seul pli, l'appel d'offres est déclaré infructueux et le pli est retourné non ouvert au Soumissionnaire concerné.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-50",
+              "article_number": "50",
+              "article_title": "EXAMEN ET EVALUATION DES OFFRES TECHNIQUES",
+              "content": "La commission d'évaluation des offres techniques (CEOT) procède à un examen détaillé des offres afin de déterminer si les aspects techniques, contractuels et commerciaux sont conformes aux exigences du Dossier d'Appel d'Offres. La commission d'évaluation des offres techniques (CEOT) invite par écrit les Soumissionnaires à compléter leurs offres techniques, le cas échéant, par les documents manquants exigés dans un délai maximum de quarante-huit (48) heures, sous peine de rejet de leurs offres, à l'exception de l'offre technique proprement dite. La commission d'évaluation des offres techniques (CEOT) vérifie que le Soumissionnaire ayant remis une offre jugée conforme dispose des capacités techniques et financières requises pour l'exécution du marché, en tenant compte notamment de ses performances antérieures sur des marchés similaires. Pour les marchés complexes et d'envergure, des réunions de clarification des aspects techniques des offres des candidats peuvent être organisées si nécessaire. La commission d'évaluation des offres techniques (CEOT) établit à l'issue de l'évaluation un rapport d'évaluation détaillé et motivé transmis sous pli confidentiel à la Structure Contractante.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-51",
+              "article_number": "51",
+              "article_title": "CONFIDENTIALITE DE L'OPERATION DE L'EVALUATION",
+              "content": "Aucun renseignement concernant les travaux et les résultats d'évaluation des offres ne doit être communiqué à toute personne non habilitée à les recevoir. Les demandes écrites, les réunions éventuelles pour éclaircissements, clarifications et compléments d'informations prévues par la présente procédure, seront considérées confidentielles et traitées comme telles.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-52",
+              "article_number": "52",
+              "article_title": "OUVERTURE ET EXAMEN DES OFFRES FINANCIERES",
+              "content": "La commission d'ouverture des plis (COP) procède à l'ouverture des plis contenant les offres financières correspondant aux offres techniques déclarées conformes aux exigences du Dossier d'Appel d'Offres. L'ouverture des plis a lieu dans les conditions fixées dans le Dossier d'Appel d'Offres aux date, heure et adresse indiquées dans l'invitation à assister à la séance publique. La commission d'ouverture des plis (COP) procède à l'examen des offres financières aux fins d'évaluation et de comparaison de ces offres sur la base des critères de sélection fixés dans le Dossier d'Appel d'Offres. L'évaluation doit permettre de vérifier que les documents constituant l'offre financière sont complets; s'assurer que chaque offre financière inclut les coûts liés à l'offre technique; déterminer le coût de chaque offre financière en Dinar Algérien après correction des erreurs matérielles éventuelles et conversion de diverses monnaies étrangères. Dans le cas où deux offres ou plus retenues sont classées ex aequo, les soumissionnaires concernés seront invités séance tenante à soumettre de nouvelles offres dont le montant ne doit pas être supérieur aux montants proposés initialement.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-53",
+              "article_number": "53",
+              "article_title": "NOTIFICATION D'ATTRIBUTION DU MARCHE",
+              "content": "La Structure Contractante procédera à la publication de l'avis d'attribution provisoire du Marché dans les mêmes formes qui ont présidé à la publication de l'avis d'appel d'offres. La signature du contrat par le soumissionnaire retenu doit, sauf circonstances exceptionnelles, intervenir au plus tard dans les dix (10) jours suivant la date d'envoi de la notification d'attribution définitive. La notification d'attribution définitive du marché et la signature du contrat par la Structure Contractante ne peuvent intervenir qu'après l'obtention du visa d'attribution définitive de la Commission des Marchés compétente. En cas de défaillance avérée de l'attributaire du marché, la Structure Contractante peut inviter le Soumissionnaire classé en seconde position à ramener son offre de prix sur l'offre de prix du Soumissionnaire initialement classé en première position avec possibilité de majoration ne pouvant excéder 10% pour les marchés des Commissions des Marchés Branches et 05% pour les marchés de la Commission des Marchés Entreprise.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 2",
+          "section_name": "DES MARCHES D'ETUDES ET SERVICES DE CONSEIL",
+          "articles": [
+            {
+              "article_id": "ART-54",
+              "article_number": "54",
+              "article_title": "CONFLITS D'INTERETS ET INCOMPATIBILITES",
+              "content": "En plus des dispositions prévues à l'article 39, il est exigé des Consultants: de fournir des prestations professionnelles, objectives et de haut niveau et de ne pas faire entrer en ligne de compte l'éventualité d'une mission ultérieure et d'éviter tout conflit d'intérêt pouvant résulter de leurs activités ou prestations; de ne pas accomplir des prestations qui seraient incompatibles avec leurs obligations présentes ou passées envers des tiers; de ne pas être engagé dans des circonstances où des Consultants engagés pour préparer le dossier technique d'un projet ne peuvent être engagés pour préparer une évaluation indépendante des aspects environnementaux du même projet; de ne pas orienter les résultats de l'étude vers des spécifications d'un fournisseur étranger particulier; les Consultants sollicités par NAFTAL pour le montage de projets en partenariat ne peuvent acquérir des intérêts dans ces projets.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-55",
+              "article_number": "55",
+              "article_title": "FORMATION ET TRANSFERT DE CONNAISSANCES",
+              "content": "Dans le cas où la prestation comporte un élément important de formation ou de transfert de connaissances au personnel de la Structure Contractante, les termes de référence afférents à la consultation doivent indiquer les objectifs, la nature, l'ampleur et les buts précis de cet élément, en fournissant notamment les détails sur les formateurs et les bénéficiaires de la formation, les connaissances et/ou compétences à transférer, les délais et les dispositions prises pour l'évaluation et le suivi de cet élément.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-56",
+              "article_number": "56",
+              "article_title": "EVALUATION DES PERFORMANCES DES CONSULTANTS",
+              "content": "Les performances des Consultants au titre du contrat conclu doivent faire l'objet d'évaluation régulière par la Structure Contractante sur la base des études fournies. Les résultats de ces évaluations doivent être pris en compte par la Structure Contractante à l'occasion de consultations ultérieures. La Structure Contractante doit superviser et examiner les travaux des Consultants, mais aucune modification ne peut être apportée à leurs documents finaux sans leur accord.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-57",
+              "article_number": "57",
+              "article_title": "LE DOSSIER D'APPEL D'OFFRES",
+              "content": "Le Dossier d'Appel d'Offres doit être rédigé de façon à susciter la concurrence et décrire clairement l'opération à réaliser. Tous les Consultants ayant retiré le Dossier d'Appel d'Offres doivent recevoir les mêmes informations et pouvoir obtenir, à temps, toute information complémentaire.",
+              "subsections": [
+                {
+                  "subtitle": "57.1 CONSIDERATIONS GENERALES",
+                  "text": "Le Dossier d'Appel d'Offres doit être rédigé de façon à susciter la concurrence et décrire clairement l'opération à réaliser. Tous les Consultants ayant retiré le Dossier d'Appel d'Offres doivent recevoir les mêmes informations et pouvoir obtenir à temps toute information complémentaire. Pendant la période de la préparation des offres, les Consultants peuvent demander par écrit des éclaircissements sur les informations figurant dans le Dossier d'Appel d'Offres. Les Consultants doivent présenter des offres et maintenir une durée de validité pendant une période de temps suffisante dans les conditions indiquées dans le Dossier d'Appel d'Offres."
+                },
+                {
+                  "subtitle": "57.2 CONTENU DU DOSSIER D'APPEL D'OFFRES",
+                  "text": "Le Dossier d'Appel d'Offres doit contenir les informations nécessaires à la préparation des offres par les Consultants répondant aux termes de référence et aux conditions concernant l'opération à réaliser. Le Dossier d'Appel d'Offres doit comprendre notamment: la lettre d'invitation adressée aux Consultants; les Instructions aux Consultants incluant les dispositions générales et particulières; la forme de l'offre technique contenant un dossier administratif, une description de l'entité du Consultant, une description de la méthodologie et du plan d'exécution proposés, la composition de l'équipe proposée, les curriculum vitae signés; la forme de l'offre financière établie au moyen de tableaux types; les termes de référence définissant les objectifs, les buts et l'étendue de la mission; le projet de contrat définissant les conditions et modalités d'exécution; les modèles de documents requis."
+                }
+              ]
+            },
+            {
+              "article_id": "ART-58",
+              "article_number": "58",
+              "article_title": "SOUMISSION DES OFFRES",
+              "content": "Les offres technique et financière devront être soumises en deux étapes distinctes: Première étape: Réception et ouverture des plis en séance publique, évaluation des offres techniques ne contenant aucune indication de l'offre de prix et déclaration d'éligibilité des Consultants à la remise d'une offre financière. Deuxième étape: Réception et ouverture des plis en séance publique, évaluation et classement des offres financières et recommandation d'attribution du Marché. Les Consultants ne doivent en aucun cas porter des indications de leurs offres de prix dans leurs offres techniques, sous peine de rejet. Les Consultants ne doivent, sous peine de rejet, présenter qu'une seule offre par appel d'offres.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-59",
+              "article_number": "59",
+              "article_title": "OUVERTURE DES OFFRES TECHNIQUES",
+              "content": "La réception et l'ouverture des plis par la commission d'ouverture des plis (COP) doivent se dérouler au lieu et à la date fixée par la Structure Contractante dans la lettre d'invitation et dans le Dossier d'Appel d'Offres. Le nom de chaque Consultant sera lu à haute voix et toutes les informations pertinentes seront annoncées lors de l'ouverture des plis et consignées au registre de passation des marchés. Si aucune soumission n'a été reçue, l'appel d'offres est déclaré infructueux. En cas de réception d'une seule soumission, l'appel d'offres est déclaré infructueux par la commission d'ouverture des plis (COP) et le pli est retourné non ouvert au Consultant concerné.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-60",
+              "article_number": "60",
+              "article_title": "EXAMEN ET EVALUATION DES OFFRES TECHNIQUES",
+              "content": "La commission d'évaluation des offres techniques (CEOT) doit procéder à un examen détaillé des offres afin de déterminer si les aspects techniques, contractuels et commerciaux sont conformes aux exigences du Dossier d'Appel d'Offres. La commission d'évaluation des offres techniques (CEOT) doit évaluer chaque offre technique sur la base des critères contenus dans le Dossier d'Appel d'Offres dont les plus importants sont: les qualifications du personnel clé proposé; la qualité de la méthodologie proposée; l'expérience du Consultant dans le domaine; le transfert éventuel de connaissances; la participation locale; les délais de réalisation et volumes horaires. Une note comprise entre 1 et 100 est attribuée à chaque critère d'évaluation. Ces notes sont ensuite pondérées pour aboutir à une note technique sur 100 pour chaque offre. Toute offre technique comportant une indication de l'offre de prix du Consultant est rejetée. Dans le cas où aucune ou une seule offre technique est retenue, l'appel d'offres est déclaré infructueux.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-61",
+              "article_number": "61",
+              "article_title": "CARACTERE CONFIDENTIEL DE L'OPERATION D'EVALUATION",
+              "content": "Après l'ouverture des plis, aucun renseignement concernant l'examen et l'évaluation des offres ne sera communiqué à toute personne n'ayant pas été désignée pour participer à cette évaluation. Dans les demandes écrites de clarifications de la Structure Contractante, seule pourra être examinée la proposition du Soumissionnaire concerné, et les échanges ne peuvent en aucun cas porter sur les propositions concurrentes.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-62",
+              "article_number": "62",
+              "article_title": "OUVERTURE ET EXAMEN DES OFFRES FINANCIERES",
+              "content": "Les Consultants dont les offres techniques ont été jugées conformes au Dossier d'Appel d'Offres et ayant obtenu une note supérieure ou égale à la note minimum de qualification seront invités à remettre des offres financières au titre de la deuxième étape. Avant ouverture des plis contenant les offres financières, la note technique obtenue par chaque Consultant sera portée à la connaissance des participants à la séance. L'évaluation des offres financières doit permettre de vérifier que les documents constituant l'offre financière sont complets; s'assurer que chaque offre financière inclut les coûts de la totalité de l'étude et/ou des Services de Conseil; déterminer le coût de chaque offre financière en Dinar Algérien après correction des erreurs matérielles et conversion de diverses monnaies étrangères. La note totale attribuée à chaque Consultant est la moyenne pondérée de la note technique et de la note relative à l'offre financière. Le poids attribué à l'offre financière ne peut dépasser 30 points sur un total de 100. Le Consultant dont l'offre a obtenu la note totale la plus élevée est retenu aux fins de recommandation d'attribution du Marché.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-63",
+              "article_number": "63",
+              "article_title": "NOTIFICATION D'ATTRIBUTION PROVISOIRE DU MARCHE",
+              "content": "La Structure Contractante procède à la publication de l'avis d'attribution provisoire du Marché dans les mêmes formes qui ont présidé à la publication de l'avis de l'appel à manifestation d'intérêt. La signature du contrat par le Consultant retenu doit, sauf circonstances exceptionnelles, intervenir au plus tard dans les dix (10) jours suivant la date d'envoi de la notification d'attribution définitive. La signature du contrat par la Structure Contractante et la notification d'attribution définitive du Marché ne peuvent intervenir qu'après l'obtention du visa de la Commission des Marchés compétente.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-64",
+              "article_number": "64",
+              "article_title": "DISPOSITIONS PARTICULIERES RELATIVES AUX PRESTATIONS DE FORMATION",
+              "content": "Les dispositions du présent article sont applicables pour les Marchés de formation dont le montant est supérieur à 50.000.000 DA.",
+              "subsections": [
+                {
+                  "subtitle": "64.1 MODES DE PASSATION",
+                  "text": "Outre les modes de passation prévus dans la présente procédure, les marchés de formation sont passés soit par Consultation Restreinte dans les conditions prévues par le présent article, ou par gré à gré simple dans les cas prévus ci-après. Ces marchés sont passés par Consultation Restreinte sur la base d'une liste dressée par la Structure Contractante issue ou non d'un processus de pré-qualification. La Structure Contractante a recours au gré à gré simple pour: les formations dispensées par les universités et les écoles agréées nationales et étrangères; l'organisation de concours en partenariat avec les universités et établissements agréés; la location des infrastructures de formation; la certification des centres et des simulateurs de l'entreprise; la fourniture d'outils pédagogiques et autres ouvrages scientifiques liés à ces formations."
+                },
+                {
+                  "subtitle": "64.2 PROCESSUS D'APPEL D'OFFRES",
+                  "text": "Les Marchés de formation quand ils sont passés par Consultation restreinte sont réalisés selon le processus en deux (02) étapes telle que prévu dans la présente procédure."
+                },
+                {
+                  "subtitle": "64.3 CRITERES DE SELECTION",
+                  "text": "La Structure Contractante peut retenir le Soumissionnaire sur la base de l'offre la mieux disante basée sur un système de pondération technico-financière dans les conditions prévues dans la présente section. En règle générale, le poids de l'offre financière est de 30 points sur 100. Le Dossier d'Appel d'Offres précise les poids respectifs attribués à l'offre technique et à l'offre financière."
+                },
+                {
+                  "subtitle": "64.4 CONTROLE DE CONFORMITE",
+                  "text": "Les Marchés objet de la présente Section sont soumis au contrôle de conformité dans les conditions prévues par la présente procédure."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 3",
+          "section_name": "DES RECOURS DES SOUMISSIONNAIRES",
+          "articles": [
+            {
+              "article_id": "ART-65",
+              "article_number": "65",
+              "article_title": "RECOURS DES SOUMISSIONNAIRES",
+              "content": "Outre les droits de recours prévus par la législation en vigueur, le Soumissionnaire qui conteste le choix opéré par la Structure Contractante dans le cadre d'un appel d'offres ou d'un gré à gré après consultation peut introduire un recours auprès de la Structure Contractante.",
+              "subsections": [
+                {
+                  "subtitle": "65.1",
+                  "text": "Outre les droits de recours prévus par la législation en vigueur, le Soumissionnaire qui conteste le choix opéré par la Structure Contractante peut introduire un recours auprès de la Structure Contractante. Les recours concernant la phase d'évaluation des offres techniques doivent être introduits dans les quarante-huit (48) heures qui suivent la date de notification du rejet de l'offre technique. Les recours concernant l'ouverture et l'évaluation des offres financières doivent être introduits au plus tard dans les quarante-huit (48) heures qui suivent la date d'ouverture des plis offres financières. Dans le cas d'un processus de pré-qualification, le recours est introduit dans un délai de quarante-huit (48) heures qui suivent la date de notification du rejet des candidatures."
+                },
+                {
+                  "subtitle": "65.2",
+                  "text": "Le recours d'un Soumissionnaire ne peut porter que sur les décisions prises par la Structure Contractante dans le traitement de son offre."
+                },
+                {
+                  "subtitle": "65.3",
+                  "text": "Tout recours introduit par un Soumissionnaire doit comporter: Les noms, qualité, fonction, raison sociale et adresse du siège social du Soumissionnaire; Les références et l'objet de l'appel à pré-qualification, de l'appel d'offres ou du gré à gré après consultation concerné; Un exposé des motifs du recours, daté et signé, accompagné de toutes pièces justificatives."
+                },
+                {
+                  "subtitle": "65.4",
+                  "text": "Les recours des Soumissionnaires doivent être déposés ou transmis à la Structure Contractante contre accusé de réception. Les recours ayant satisfait aux conditions de recevabilité ont un effet suspensif sur le processus d'appel d'offres en cours. Tout recours enregistré par la Structure Contractante sera transmis au Secrétariat de la Commission des Marchés compétente au plus tard dans les quarante-huit (48) heures qui suivent sa réception."
+                },
+                {
+                  "subtitle": "65.5",
+                  "text": "Le traitement des recours est dévolu à la Commission des Marchés compétente qui peut faire appel à toute expertise interne de l'Entreprise. Tout recours n'ayant pas satisfait aux conditions susvisées est rejeté par la Commission des Marchés compétente. La Commission des Marchés compétente rend une décision motivée au plus tard dans les cinq (05) jours ouvrables à compter de la date de sa réception par le Secrétariat de la Commission."
+                },
+                {
+                  "subtitle": "65.6",
+                  "text": "Dans le cas où la Commission des Marchés compétente considère que le recours est fondé, la Structure Contractante doit prendre les mesures appropriées, soit rétablir le requérant dans ses droits, soit annuler le processus."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title_id": "TITRE V",
+      "title_name": "DES AVENANTS ET DE LA SOUS TRAITANCE",
+      "sections": [
+        {
+          "section_id": "SECTION 1",
+          "section_name": "DES AVENANTS",
+          "articles": [
+            {
+              "article_id": "ART-66",
+              "article_number": "66",
+              "article_title": "CONCLUSION D'AVENANTS",
+              "content": "La Structure Contractante peut recourir à la conclusion d'avenants au marché dans le cadre des dispositions de la présente procédure.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-67",
+              "article_number": "67",
+              "article_title": "DEFINITION DE L'AVENANT",
+              "content": "L'avenant constitue un document contractuel accessoire au marché qui, dans tous les cas, est conclu lorsqu'il a pour objet l'augmentation ou la diminution des prestations et/ou la modification d'une ou de plusieurs clauses contractuelles du marché. Les prestations objet de l'avenant peuvent couvrir des opérations supplémentaires et/ou complémentaires entrant dans l'objet global du marché. Lorsque les quantités fixées dans un marché ne permettent pas la réalisation de son objet, la Structure contractante peut émettre des ordres de service permettant d'ordonner des prestations supplémentaires et/ou complémentaires. En tout état de cause, un avenant ne peut modifier de manière essentielle l'économie du marché, sauf sujétions techniques imprévues ne résultant pas du fait des parties au contrat. L'avenant ne peut modifier ni l'objet du marché ni son étendue. La Structure Contractante doit surseoir aux paiements d'un marché lorsqu'il atteint son montant contractuel et la poursuite des paiements ne peut s'effectuer qu'après la mise en place d'un avenant justifiant la modification du prix contractuel.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-68",
+              "article_number": "68",
+              "article_title": "REGLES APPLICABLES AUX AVENANTS",
+              "content": "L'avenant obéit aux conditions économiques de base du Marché. Au cas où il ne peut être tenu compte des prix contractuels fixés au marché pour les prestations complémentaires prévues dans un avenant, de nouveaux prix peuvent, le cas échéant, être fixés.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-69",
+              "article_number": "69",
+              "article_title": "CONDITIONS DE MISE EN PLACE DES AVENANTS",
+              "content": "L'avenant ne peut être conclu et soumis à la Commission des Marchés compétente que dans la limite des délais contractuels d'exécution. Néanmoins, cette disposition ne s'applique pas dans les cas suivants: lorsque l'avenant est sans incidence financière et porte sur l'introduction et/ou la modification d'une ou plusieurs clauses contractuelles autres que celles relatives aux délais d'exécution; lorsque des raisons exceptionnelles et imprévisibles indépendantes de la volonté des deux parties entraînent la rupture substantielle de l'équilibre économique du contrat et/ou le déplacement du délai contractuel initial; lorsque exceptionnellement, l'avenant ayant pour objet l'ajustement des quantités définitives du marché ne peut être passé dans les délais contractuels. Les avenants prévus aux alinéas 2 et 3 ci-dessus sont, quel que soit leur montant, soumis au contrôle à priori de la Commission des Marchés Compétente.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-70",
+              "article_number": "70",
+              "article_title": "CONTROLE DES AVENANTS",
+              "content": "L'avenant est soumis au contrôle de conformité de la Commission des Marchés compétente lorsque son objet modifie la dénomination des parties contractantes, les garanties techniques et financières, le délai contractuel et lorsque son montant ou le montant cumulé des différents avenants dépasse: vingt pour cent (20%) du montant initial du Marché pour les marchés relevant de la compétence des Commissions des Marchés Branches, Commission des Marchés Activités Centrales et Commissions des Marchés Décentralisées; dix pour cent (10%) du montant initial du Marché pour les marchés relevant de la compétence de la Commission des Marchés Entreprise. Lorsque la valeur de l'avenant dépasse les seuils cités ci-dessus, la Structure Contractante doit justifier auprès de la Commission des Marchés compétente que les conditions initiales de mise en concurrence ne sont pas remises en cause.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 2",
+          "section_name": "DE LA SOUS-TRAITANCE",
+          "articles": [
+            {
+              "article_id": "ART-71",
+              "article_number": "71",
+              "article_title": "RECOURS A LA SOUS-TRAITANCE",
+              "content": "La sous-traitance porte sur une partie de l'objet du marché dans le cadre d'un engagement contractuel liant directement le sous-traitant et le Partenaire Cocontractant de la Structure Contractante.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-72",
+              "article_number": "72",
+              "article_title": "RESPONSABILITE DU PARTENAIRE COCONTRACTANT",
+              "content": "Le Partenaire Cocontractant est seul responsable, vis-à-vis de la Structure Contractante, de l'exécution de la partie sous-traitée du marché.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-73",
+              "article_number": "73",
+              "article_title": "CONDITIONS DE RECOURS A LA SOUS-TRAITANCE",
+              "content": "Le recours à la sous-traitance est possible dans les conditions suivantes: le champ principal d'intervention de la sous-traitance doit être expressément prévu dans le contrat et dans le Dossier d'Appel d'Offres; le choix du sous-traitant est obligatoirement et préalablement approuvé par la Structure Contractante après avoir vérifié que ses qualifications, ses références professionnelles et ses moyens humains et matériels sont en adéquation avec les tâches objet de la sous-traitance; lorsque les prestations à exécuter par le sous-traitant sont prévues par le contrat, celui-ci peut être payé directement par la Structure Contractante; le montant de la sous-traitance locale doit être libellé et payé en dinar algérien. La Structure Contractante doit s'assurer que la liste des sous-traitants est constituée uniquement d'entreprises algériennes, sauf proposition contraire dûment documentée et justifiant le recours exceptionnel à la sous-traitance étrangère.",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title_id": "TITRE VI",
+      "title_name": "DU CONTROLE DES MARCHES",
+      "sections": [
+        {
+          "section_id": "SECTION 1",
+          "section_name": "DISPOSITIONS GENERALES",
+          "articles": [
+            {
+              "article_id": "ART-74",
+              "article_number": "74",
+              "article_title": "CONTROLE DES MARCHES",
+              "content": "Les marchés conclus par la Structure Contractante sont soumis au contrôle, préalablement à leur mise en vigueur, avant et après leur exécution.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-75",
+              "article_number": "75",
+              "article_title": "TYPES DE CONTROLE",
+              "content": "Les contrôles auxquels sont soumis les marchés s'exercent par les Commissions internes de l'Entreprise, instituées à cet effet.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-76",
+              "article_number": "76",
+              "article_title": "MARCHES CONCERNES PAR LE CONTROLE",
+              "content": "Les différents contrôles des marchés prévus par la présente procédure sont opérés quel qu'en soit le type, suivant les niveaux et seuils préétablis.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SECTION 2",
+          "section_name": "DES DIFFERENTS TYPES DE CONTROLE",
+          "articles": []
+        },
+        {
+          "section_id": "SOUS-SECTION 1",
+          "section_name": "DU CONTROLE TECHNIQUE DES DAO",
+          "articles": [
+            {
+              "article_id": "ART-77",
+              "article_number": "77",
+              "article_title": "COMITES DE VALIDATION TECHNIQUE DES DOSSIERS D'APPEL D'OFFRES",
+              "content": "Il est institué au sein de NAFTAL des Comités de Validation Technique des Dossiers d'Appel d'Offres chargés du contrôle à priori des aspects techniques des dossiers d'appel d'offres. Ils sont chargés de: contrôler à priori, analyser et vérifier la qualité et la conformité de la partie technique du Dossier d'Appel d'Offres relative à la définition des besoins; garantir que la commande objet des Dossiers d'Appels d'Offres et de pré-qualification répond bien aux besoins exprimés par la Structure Contractante et n'est pas orientée vers un produit ou un opérateur économique déterminé. Il est institué au sein de NAFTAL les Comités suivants: un Comité de Validation Technique des Dossiers d'Appel d'Offres Entreprise; des Comités de Validation Technique des Dossiers d'Appel d'Offres des Branches. Les seuils de compétence des comités visés ci-dessus sont fixés dans les décisions portant leur création.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-78",
+              "article_number": "78",
+              "article_title": "REGLEMENT INTERIEUR TYPE DES COMITES DE VALIDATION TECHNIQUE DES DOSSIERS D'APPEL D'OFFRES",
+              "content": "Les modalités de création, de fonctionnement ainsi que les missions et compétences des Comités de validation technique des dossiers d'appel d'offres NAFTAL sont prévues par le règlement intérieur type approuvé par le Président Directeur Général.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SOUS-SECTION 2",
+          "section_name": "DU CONTROLE INTERNE",
+          "articles": [
+            {
+              "article_id": "ART-79",
+              "article_number": "79",
+              "article_title": "ORGANISATION DU CONTROLE INTERNE",
+              "content": "Le contrôle interne est exercé, au sens de la présente procédure, conformément aux décisions portant organisation de la macrostructure de NAFTAL et des différentes Structures Contractantes. Les modalités pratiques de cet exercice doivent préciser notamment l'étendue de la mission de chaque organe de contrôle et les mesures nécessaires à la cohérence et à l'efficacité des opérations de contrôle.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-80",
+              "article_number": "80",
+              "article_title": "COMMISSIONS DE CONTROLE INTERNE",
+              "content": "Dans le cadre du contrôle interne, il est institué au sein de Naftal des commissions d'ouverture des plis (COP) permanentes et des Commissions d'évaluation des offres techniques (CEOT). L'ouverture des plis et l'évaluation des offres ainsi que la recommandation d'attribution de marchés, dans les termes et conditions fixés par la présente procédure, relèvent chacune en ce qui la concerne, des commissions d'ouverture des plis (COP) et des commissions d'évaluation des offres techniques (CEOT) instituées à cet effet.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-81",
+              "article_number": "81",
+              "article_title": "MISSIONS DE LA COMMISSION D'OUVERTURE DES PLIS",
+              "content": "La commission d'ouverture des plis (COP) a pour missions: de constater la régularité de l'enregistrement des offres sur un registre tenu à cet effet par la Structure Contractante; de dresser la liste des Soumissionnaires dans l'ordre d'arrivée avec l'indication du contenu des plis contenant les offres techniques; de dresser une description détaillée des pièces constitutives de chaque offre technique; d'apposer le visa de la COP sur la première page de chaque document contenu dans les offres techniques originales des plis ouverts; de restituer les plis des offres techniques ouverts au représentant de la Structure Contractante à la fin de la séance; de procéder à l'ouverture des plis contenant les offres financières correspondant aux offres techniques déclarées conformes par la commission d'évaluation des offres techniques (CEOT); d'examiner et de contrôler la conformité des offres financières; de classer sur la base des paramètres arrêtés dans le Dossier d'Appel d'Offres les offres financières; de recommander l'attribution du marché au Soumissionnaire retenu; de dresser séance tenante le procès-verbal signé par tous les membres présents.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-82",
+              "article_number": "82",
+              "article_title": "REGLEMENT INTERIEUR TYPE DE LA COMMISSION D'OUVERTURE DES PLIS",
+              "content": "Les attributions et missions des commissions d'ouverture des plis (COP) sont fixées par le règlement intérieur type approuvé par le Président Directeur Général.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-83",
+              "article_number": "83",
+              "article_title": "COMMISSION D'EVALUATION DES OFFRES TECHNIQUES",
+              "content": "A l'occasion de chaque marché, il est institué une commission ad-hoc d'évaluation des offres techniques (CEOT), composée de membres qualifiés choisis en raison de leur compétence et désignés par décision du premier responsable de la Structure Contractante.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-84",
+              "article_number": "84",
+              "article_title": "QUALITE DES MEMBRES DE LA COMMISSION D'EVALUATION DES OFFRES TECHNIQUES",
+              "content": "La qualité de membre de la commission d'évaluation des offres techniques (CEOT) est incompatible avec celle de membre de la commission d'ouverture des plis et ce, uniquement lorsqu'il s'agit du même Dossier d'Appel d'Offres. La Structure Contractante peut faire appel, sous sa responsabilité et à titre consultatif, à toute compétence susceptible de contribuer aux travaux de la commission d'évaluation des offres techniques (CEOT).",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-85",
+              "article_number": "85",
+              "article_title": "MISSIONS DE LA COMMISSION D'EVALUATION DES OFFRES TECHNIQUES",
+              "content": "La commission d'évaluation des offres techniques (CEOT) procède à l'examen des offres techniques selon le processus d'évaluation détaillé dans la présente procédure dans les conditions précisées dans le Dossier d'Appel d'Offres. Dans le cas de la procédure de concours, le jury propose à la Structure Contractante la liste des lauréats retenus. Leurs offres financières sont ensuite examinées pour retenir, conformément au Dossier de concours, l'offre économiquement la plus avantageuse.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-86",
+              "article_number": "86",
+              "article_title": "REGLEMENT INTERIEUR TYPE DE LA COMMISSION D'EVALUATION DES OFFRES TECHNIQUES",
+              "content": "Les attributions et missions des commissions d'évaluation des offres techniques (CEOT) sont fixées par le règlement intérieur type approuvé par le Président Directeur Général.",
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "section_id": "SOUS-SECTION 3",
+          "section_name": "DU CONTROLE DE CONFORMITE",
+          "articles": [
+            {
+              "article_id": "ART-87",
+              "article_number": "87",
+              "article_title": "ORGANISATION DU CONTROLE DE CONFORMITE",
+              "content": "Dans le cadre du contrôle de conformité, il est institué au sein de NAFTAL les Commissions des Marchés suivantes: une Commission des Marchés Entreprise (CME); des Commissions des Marchés des Branches (CMB); une Commission des Marchés des Activités Centrales (CMC); des Commissions des Marchés Décentralisées (CMD). Les seuils de compétence des commissions visées ci-dessus sont fixés dans les décisions portant leur création.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-88",
+              "article_number": "88",
+              "article_title": "MISSIONS DES COMMISSIONS DES MARCHES DE NAFTAL",
+              "content": "Les Commissions des Marchés visées à l'article 87 sont chargées de vérifier la conformité des marchés à la législation et aux dispositions de la présente procédure. Elles sont chargées notamment d'examiner: les projets de Dossiers d'Appel d'Offres; les projets de Dossier de pré-qualification; les projets de Marchés ou d'avenants qui relèvent de leurs compétences; tout avenant susceptible de porter le montant initial du marché au seuil de sa compétence; les marchés de régularisation au sens de l'article 4; les recours introduits par les Soumissionnaires dans le cadre d'un appel à pré-qualification, d'un appel d'offres ou d'un gré à gré après consultation.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-89",
+              "article_number": "89",
+              "article_title": "QUALITE DES MEMBRES DES COMMISSIONS DES MARCHES DE NAFTAL",
+              "content": "Toute personne siégeant aux Commissions des Marchés visées à l'article 87, à quelque titre que ce soit, est tenue au secret professionnel. La qualité de membre d'une Commission des Marchés est incompatible avec celle de membre d'une commission d'ouverture des plis (COP) ou d'une commission d'évaluation des offres techniques (CEOT) uniquement lorsqu'il s'agit du même Dossier d'Appel d'Offres. La qualité de membre du Comité de Validation Technique des Dossiers d'Appel d'Offres est incompatible avec celle de membre d'une Commission des Marchés.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-90",
+              "article_number": "90",
+              "article_title": "REGLEMENT INTERIEUR TYPE DES COMMISSIONS DES MARCHES DE NAFTAL",
+              "content": "Les modalités de création, de fonctionnement ainsi que les missions et compétences des Commissions des Marchés de NAFTAL sont prévues par le règlement intérieur type approuvé par le Président Directeur Général.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-91",
+              "article_number": "91",
+              "article_title": "CONDITIONS DE DECISION DE PASSER OUTRE",
+              "content": "La Commission des Marchés est un centre de contrôle de conformité des Marchés relevant de sa compétence. A ce titre, elle délivre un visa pour le lancement et la mise en vigueur du marché. En cas de refus de visa par les Commissions des Marchés visées à l'article 87, le Président Directeur Général pour la CME et les Directeurs de Branches pour les CMB et les CMD, les Directeurs Exécutifs et les Directeurs Centraux ou de soutien pour le CMC peuvent, sur rapport motivé, passer outre les décisions desdites Commissions. Lorsque le passer outre est exercé par un Directeur de Branche, Exécutif Centraux ou de soutien, le Président Directeur Général est tenu informé. La décision de passer outre ne peut intervenir en cas de refus de visa motivé par la non-conformité à des dispositions législatives ou réglementaires. En tout état de cause, une décision de passer outre ne peut pas intervenir après un délai de quatre-vingt-dix (90) jours après la notification de refus de visa.",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title_id": "TITRE VII",
+      "title_name": "DES DISPOSITIONS DIVERSES ET TRANSITOIRES",
+      "sections": [
+        {
+          "section_id": "GENERAL",
+          "section_name": "",
+          "articles": [
+            {
+              "article_id": "ART-92",
+              "article_number": "92",
+              "article_title": "ENTREE EN VIGUEUR",
+              "content": "La présente procédure entre en vigueur à compter de la date de sa signature par le Président Directeur Général.",
+              "subsections": []
+            },
+            {
+              "article_id": "ART-93",
+              "article_number": "93",
+              "article_title": "DISPOSITIONS TRANSITOIRES",
+              "content": "Les Dossiers d'Appel d'Offres ayant reçu le visa antérieurement à la date d'entrée en vigueur de la présente procédure demeurent régis par la procédure de passation des Marchés L089 (R5) du 13 mai 2013 et continuent à produire leurs effets jusqu'à concrétisation de la procédure d'appel d'offres, sauf si la Structure Contractante décide de les mettre en conformité avec les dispositions de la présente procédure. Les projets de Dossiers d'Appel d'Offres, de contrats et d'avenants introduits auprès des Commissions des Marchés compétentes avant l'entrée en vigueur de la présente procédure continuent à être examinés dans le cadre de la procédure de passation des Marchés L089 (R5) du 13 mai 2013. Les Marchés dont l'attribution est notifiée antérieurement à l'entrée en vigueur de la présente procédure demeurent régis par les dispositions de la procédure de passation des Marchés L089 (R5) du 13 mai 2013. Les processus de pré-qualification engagés avant la signature de la présente procédure et dont la Consultation Sélective n'a pas encore été lancée restent maintenus et la Consultation Sélective sera conduite conformément à la présente procédure. Le Président Directeur Général peut notamment en cas de nécessité impérieuse ou d'impératifs de fonctionnement déroger à certaines dispositions de la présente procédure. Fait à Alger, le 07 JUIN 2016.",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

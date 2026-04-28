@@ -99,7 +99,7 @@ class RAGPipeline:
         context_parts = []
 
         # CORE LAWS (NOW SEMANTIC)
-        context_parts.append("[CORE_KNOWLEDGE]")
+        context_parts.append("[PROCEDURE_DE_MARCHE]")
         context_parts.append(self._safe_serialize(core))
 
         # RETRIEVED DOCS

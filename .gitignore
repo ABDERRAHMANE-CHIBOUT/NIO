@@ -24,8 +24,6 @@ cache/
 *.npz
 *.npy
 *.faiss
-*.jsonl
-*.json     
 
 # IDE / Editor
 .vscode/
@@ -36,3 +34,5 @@ cache/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+/tests
