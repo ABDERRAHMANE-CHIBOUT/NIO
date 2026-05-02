@@ -97,7 +97,9 @@ class CaseExtractor:
                         "payment_irregularity"
                     ],
 
-                    "raw_key_events": []
+                    "raw_key_events": [],
+
+                    "raw_extraction_of_all_document_content": null
                 }}
 
                 -----------------------------------------

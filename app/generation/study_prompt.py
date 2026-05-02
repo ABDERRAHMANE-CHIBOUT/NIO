@@ -48,7 +48,7 @@ def build_study_prompt(extracted_case, laws):
             - conflict of interest risks
 
             ==================================================
-            REQUIRED OUTPUT STRUCTURE
+            REQUIRED OUTPUT STRUCTURE (List the necessary elements according to the study case)
             ==================================================
 
             ## 1. Analyse globale de légalité
