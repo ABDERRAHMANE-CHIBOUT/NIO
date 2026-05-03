@@ -54,7 +54,9 @@ def map_llm_provider(llm_name: str) -> str:
         "qwen3-30b-a3b-thinking": "QWEN3-30B-A3B-THINKING",
         "mistralai/voxtral-mini-4b-realtime-2602": "MISTRALAI_VOXTRAL_MINI_4B_REALTIME_2602",
         "gpt-oss-120b": "GPT_OSS_120B",
-        "google/gemma-4-31b": "GOOGLE_GEMMA_4_31B"
+        "google/gemma-4-31b": "GOOGLE_GEMMA_4_31B",
+        "alibaba-nlp/gte-qwen2-7b-instruct": "ALIBABA_NLP_GTE_QWEN2_7B_INSTRUCT"
+
     }
 
     provider = mapping.get(llm_name)
@@ -84,7 +86,8 @@ def list_models():
             "Qwen3-30B-A3B-Thinking",
             "mistralai/Voxtral-Mini-4B-Realtime-2602",
             "gpt-oss-120b",
-            "google/gemma-4-31B"
+            "google/gemma-4-31B",
+            "Alibaba-NLP/gte-Qwen2-7B-instruct"
         ]
     }
 

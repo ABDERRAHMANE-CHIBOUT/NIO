@@ -57,7 +57,7 @@ class LLM:
         self,
         prompt: str,
         temperature: float = 0.3,
-        max_tokens: int = 800
+        max_tokens: int = 4096
     ):
         try:
             client = self._get_client()
